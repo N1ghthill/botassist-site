@@ -1,27 +1,54 @@
 # BotAssist Site
 
-Site em Next.js para o BotAssist.
+Site oficial para divulgar e disponibilizar o **BotAssist WhatsApp** (aplicativo desktop gratuito) para **Windows, macOS e Linux**.
 
-## Desenvolvimento
+Repositório do app: `https://github.com/N1ghthill/botassist-whatsapp`
+
+## O que este site faz
+
+- Landing page do BotAssist (benefícios, FAQ e screenshots)
+- Seção de **Downloads** integrada ao GitHub Releases do app
+  - Resolve automaticamente o instalador/asset da **última release** (quando disponível)
+
+## Requisitos
+
+- Node.js **18+**
+
+## Desenvolvimento local
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build (Vercel)
+## Build
 
 ```bash
 npm run lint
 npm run build
 ```
 
+## Deploy no Vercel
+
 ### Domínio
 
 - URL esperada: `https://botassist.ruas.dev.br`
-- Configure no Vercel em **Settings → Domains** e aponte o DNS (CNAME) do subdomínio para o Vercel.
+- No Vercel: **Settings → Domains** e aponte o DNS do subdomínio para o Vercel.
 
 ### Variáveis de ambiente
 
 - `NEXT_PUBLIC_SITE_URL` (ex.: `https://botassist.ruas.dev.br`)
 
+## Releases e downloads
+
+O site busca os arquivos da **última release** do repositório do app (`botassist-whatsapp`) usando os manifests gerados pelo `electron-builder`:
+
+- Windows: `latest.yml`
+- macOS: `latest-mac.yml`
+- Linux: `latest-linux.yml`
+
+Quando você cria e publica uma release no `botassist-whatsapp`, os botões de download passam a apontar automaticamente para os assets da release.
+
+## Suporte
+
+- E-mail: `irving@ruas.dev.br`
