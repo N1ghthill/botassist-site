@@ -1,4 +1,5 @@
 import { ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react'
+import Image from 'next/image'
 import { useState } from 'react'
 
 const screenshots = [
@@ -6,21 +7,21 @@ const screenshots = [
     id: 1,
     title: 'Interface Principal',
     description: 'Controle total do bot em uma interface intuitiva',
-    image: '/screenshot-1.png',
+    image: '/screenshot-1.jpg',
     alt: 'Interface principal do BotAssist'
   },
   {
     id: 2,
     title: 'Configurações Avançadas',
     description: 'Ajuste fino de todas as funcionalidades',
-    image: '/screenshot-2.png',
+    image: '/screenshot-2.jpg',
     alt: 'Configurações do BotAssist'
   },
   {
     id: 3,
     title: 'Logs em Tempo Real',
     description: 'Monitore todas as atividades do bot',
-    image: '/screenshot-3.png',
+    image: '/screenshot-3.jpg',
     alt: 'Logs do BotAssist'
   }
 ]
@@ -50,6 +51,37 @@ export default function Screenshots() {
         </div>
 
         <div className="max-w-6xl mx-auto">
+          {isFullscreen && (
+            <div
+              className="fixed inset-0 z-50 bg-black/80 p-4 flex items-center justify-center"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Screenshot em tela cheia"
+              onClick={() => setIsFullscreen(false)}
+            >
+              <div className="w-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
+                <div className="flex justify-end mb-3">
+                  <button
+                    onClick={() => setIsFullscreen(false)}
+                    className="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors"
+                  >
+                    Fechar
+                  </button>
+                </div>
+                <div className="bg-black rounded-xl overflow-hidden">
+                  <Image
+                    src={screenshots[currentSlide].image}
+                    alt={screenshots[currentSlide].alt}
+                    width={1280}
+                    height={720}
+                    sizes="100vw"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Carousel */}
           <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
             {/* Screenshot Display */}
@@ -61,16 +93,15 @@ export default function Screenshots() {
               </div>
               
               {/* Current Screenshot */}
-              <div className="absolute inset-8 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Maximize2 className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                    <p className="text-gray-500">Screenshot: {screenshots[currentSlide].title}</p>
-                    <p className="text-sm text-gray-400 mt-2">
-                      Em um site real, aqui estaria a imagem real da interface
-                    </p>
-                  </div>
-                </div>
+              <div className="absolute inset-8 bg-black rounded-lg overflow-hidden">
+                <Image
+                  src={screenshots[currentSlide].image}
+                  alt={screenshots[currentSlide].alt}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 1024px"
+                  className="object-contain"
+                />
               </div>
             </div>
 
@@ -139,15 +170,14 @@ export default function Screenshots() {
                     : 'border-gray-200 hover:border-gray-300'
                 }`}
               >
-                <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-gray-700 mb-2">
-                      {screenshot.id}
-                    </div>
-                    <p className="text-sm text-gray-600 font-medium">
-                      {screenshot.title}
-                    </p>
-                  </div>
+                <div className="relative aspect-video bg-black">
+                  <Image
+                    src={screenshot.image}
+                    alt={screenshot.alt}
+                    fill
+                    sizes="(max-width: 768px) 33vw, 240px"
+                    className="object-cover"
+                  />
                 </div>
               </button>
             ))}

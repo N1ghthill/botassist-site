@@ -18,7 +18,7 @@ export default function Home() {
         <title>BotAssist - Automatize conversas no WhatsApp com IA</title>
         <meta name="description" content="BotAssist conecta seu WhatsApp à Groq AI com interface gráfica. Modo anti-ban, segurança e fácil configuração." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
         <link rel="canonical" href={siteUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="BotAssist - Automatize conversas no WhatsApp com IA" />
