@@ -93,23 +93,23 @@ export default function FAQ() {
         <div className="mt-12 text-center">
           <div className="inline-block bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ainda tem dúvidas?
+              Encontrou um problema?
             </h3>
             <p className="text-gray-600 mb-6">
-              Entre em contato com nosso suporte
+              Abra uma issue (preferencial) ou envie um e-mail. Como é um projeto gratuito, não há garantia de resposta, mas todo reporte ajuda.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:irving@ruas.dev.br"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors"
               >
-                irving@ruas.dev.br
+                Enviar e-mail
               </a>
               <a
                 href="https://github.com/N1ghthill/botassist-whatsapp/issues"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gray-800 text-white font-semibold hover:bg-gray-900 transition-colors"
               >
-                GitHub Issues
+                Abrir issue no GitHub
               </a>
             </div>
           </div>

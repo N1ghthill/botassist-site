@@ -1,4 +1,6 @@
-import { MessageSquare, Github, Twitter, Mail, Globe } from 'lucide-react'
+import { MessageSquare, Github, Mail, Globe } from 'lucide-react'
+import Link from 'next/link'
+import DonateButtons from './DonateButtons'
 
 const footerLinks = {
   Produto: [
@@ -11,18 +13,17 @@ const footerLinks = {
     { label: 'Documentação', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
     { label: 'GitHub', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
     { label: 'FAQ', href: '#faq' },
-    { label: 'Suporte', href: 'mailto:irving@ruas.dev.br' }
+    { label: 'Relatar problema', href: '#report-issues' }
   ],
   Legal: [
-    { label: 'Termos de Uso', href: '#' },
-    { label: 'Política de Privacidade', href: '#' },
+    { label: 'Termos de Uso', href: '/terms' },
+    { label: 'Política de Privacidade', href: '/privacy' },
     { label: 'Licença', href: 'https://github.com/N1ghthill/botassist-whatsapp' }
   ]
 }
 
 const socialLinks = [
   { icon: Github, label: 'GitHub', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
-  { icon: Twitter, label: 'Twitter', href: '#' },
   { icon: Mail, label: 'Email', href: 'mailto:irving@ruas.dev.br' }
 ]
 
@@ -44,6 +45,9 @@ export default function Footer() {
               A ferramenta definitiva para automatizar conversas no WhatsApp com IA inteligente. 
               Seguro, confiável e fácil de usar.
             </p>
+            <div className="mb-6">
+              <DonateButtons buttonsClassName="justify-start" />
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
@@ -67,12 +71,21 @@ export default function Footer() {
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors"
-                    >
-                      {link.label}
-                    </a>
+                    {link.href.startsWith('/') ? (
+                      <Link
+                        href={link.href}
+                        className="text-gray-400 hover:text-white transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-gray-400 hover:text-white transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -89,8 +102,8 @@ export default function Footer() {
                 ruas.dev.br
               </a>
               {' '}•{' '}
-              <a href="mailto:irving@ruas.dev.br" className="text-primary-400 hover:text-primary-300">
-                Suporte: irving@ruas.dev.br
+              <a href="#report-issues" className="text-primary-400 hover:text-primary-300">
+                Relate problemas
               </a>
             </div>
             <div className="flex items-center space-x-6">

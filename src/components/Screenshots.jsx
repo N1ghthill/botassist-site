@@ -5,24 +5,27 @@ import { useState } from 'react'
 const screenshots = [
   {
     id: 1,
-    title: 'Interface Principal',
-    description: 'Controle total do bot em uma interface intuitiva',
-    image: '/screenshot-1.jpg',
-    alt: 'Interface principal do BotAssist'
+    title: 'Dashboard (modo escuro)',
+    description: 'Visão geral do status, QR Code e atividade recente',
+    image: '/screenshots/dashboard-dark.png',
+    alt: 'Dashboard do BotAssist em modo escuro',
+    frameClassName: 'bg-gray-950'
   },
   {
     id: 2,
-    title: 'Configurações Avançadas',
-    description: 'Ajuste fino de todas as funcionalidades',
-    image: '/screenshot-2.jpg',
-    alt: 'Configurações do BotAssist'
+    title: 'Configurações (modo escuro)',
+    description: 'Persona, modelo Groq, prompt e permissões',
+    image: '/screenshots/settings-dark.png',
+    alt: 'Tela de configurações do BotAssist em modo escuro',
+    frameClassName: 'bg-gray-950'
   },
   {
     id: 3,
-    title: 'Logs em Tempo Real',
-    description: 'Monitore todas as atividades do bot',
-    image: '/screenshot-3.jpg',
-    alt: 'Logs do BotAssist'
+    title: 'Dashboard (modo claro)',
+    description: 'A mesma interface com tema claro',
+    image: '/screenshots/dashboard-light.png',
+    alt: 'Dashboard do BotAssist em modo claro',
+    frameClassName: 'bg-gray-100'
   }
 ]
 
@@ -68,7 +71,9 @@ export default function Screenshots() {
                     Fechar
                   </button>
                 </div>
-                <div className="bg-black rounded-xl overflow-hidden">
+                <div
+                  className={`${screenshots[currentSlide].frameClassName || 'bg-black'} rounded-xl overflow-hidden`}
+                >
                   <Image
                     src={screenshots[currentSlide].image}
                     alt={screenshots[currentSlide].alt}
@@ -85,24 +90,17 @@ export default function Screenshots() {
           {/* Carousel */}
           <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
             {/* Screenshot Display */}
-            <div className="relative aspect-video bg-gradient-to-br from-gray-900 to-gray-800">
-              <div className="absolute top-4 left-4 flex space-x-2">
-                <div className="h-3 w-3 rounded-full bg-red-500"></div>
-                <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                <div className="h-3 w-3 rounded-full bg-green-500"></div>
-              </div>
-              
-              {/* Current Screenshot */}
-              <div className="absolute inset-8 bg-black rounded-lg overflow-hidden">
-                <Image
-                  src={screenshots[currentSlide].image}
-                  alt={screenshots[currentSlide].alt}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 1024px"
-                  className="object-contain"
-                />
-              </div>
+            <div
+              className={`relative aspect-video ${screenshots[currentSlide].frameClassName || 'bg-black'}`}
+            >
+              <Image
+                src={screenshots[currentSlide].image}
+                alt={screenshots[currentSlide].alt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="object-contain"
+              />
             </div>
 
             {/* Screenshot Info */}
@@ -170,13 +168,13 @@ export default function Screenshots() {
                     : 'border-gray-200 hover:border-gray-300'
                 }`}
               >
-                <div className="relative aspect-video bg-black">
+                <div className={`relative aspect-video ${screenshot.frameClassName || 'bg-black'}`}>
                   <Image
                     src={screenshot.image}
                     alt={screenshot.alt}
                     fill
                     sizes="(max-width: 768px) 33vw, 240px"
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
               </button>

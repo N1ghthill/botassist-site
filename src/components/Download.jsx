@@ -1,5 +1,6 @@
 import { Download as DownloadIcon, Monitor, Apple, Terminal } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
+import DonateButtons from './DonateButtons'
 
 const Download = () => {
   const downloads = useMemo(
@@ -104,6 +105,18 @@ const Download = () => {
               </div>
             )
           })}
+        </div>
+
+        <div className="mt-14 text-center">
+          <div className="inline-block bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              Apoie o projeto (opcional)
+            </h3>
+            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+              O BotAssist é gratuito. Se ele te ajudou, você pode apoiar com um cafezinho para manter o projeto vivo.
+            </p>
+            <DonateButtons />
+          </div>
         </div>
       </div>
     </section>

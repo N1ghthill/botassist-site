@@ -38,6 +38,8 @@ npm run build
 ### Variáveis de ambiente
 
 - `NEXT_PUBLIC_SITE_URL` (ex.: `https://botassist.ruas.dev.br`)
+- `NEXT_PUBLIC_PIX_KEY` (opcional — exibe botão de Pix no "cafezinho")
+- `NEXT_PUBLIC_PIX_LABEL` (opcional — texto exibido no modal de Pix)
 
 ## Releases e downloads
 
@@ -49,6 +51,12 @@ O site busca os arquivos da **última release** do repositório do app (`botassi
 
 Quando você cria e publica uma release no `botassist-whatsapp`, os botões de download passam a apontar automaticamente para os assets da release.
 
-## Suporte
+## Contato / Problemas
 
-- E-mail: `irving@ruas.dev.br`
+- Preferencial: abra uma issue em `https://github.com/N1ghthill/botassist-whatsapp/issues`
+- E-mail (assuntos sensíveis): `irving@ruas.dev.br`
+
+## Apoie (cafezinho)
+
+- GitHub Sponsors: `https://github.com/sponsors/N1ghthill`
+- Pix (opcional no site): defina `NEXT_PUBLIC_PIX_KEY` e, se quiser, `NEXT_PUBLIC_PIX_LABEL` no Vercel
