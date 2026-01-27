@@ -60,3 +60,18 @@ Quando você cria e publica uma release no `botassist-whatsapp`, os botões de d
 
 - GitHub Sponsors: `https://github.com/sponsors/N1ghthill`
 - Pix (opcional no site): defina `NEXT_PUBLIC_PIX_KEY` e, se quiser, `NEXT_PUBLIC_PIX_LABEL` no Vercel
+
+## Licença
+
+Este repositório (**botassist-site**) é **software livre** e está licenciado sob a **MIT License**.
+
+- Você pode usar, modificar e redistribuir (inclusive comercialmente), desde que mantenha o aviso de copyright e a licença.
+- O software continua sendo de autoria de Irving Ruas (copyright).
+
+Veja: `LICENSE`.
+
+## Telemetria / rastreamento
+
+Este site não inclui SDKs de analytics, pixels de rastreamento ou telemetria do aplicativo.
+
+- O que pode existir são **logs técnicos do provedor** (ex.: IP/user-agent/data-hora) para segurança e operação normal do serviço.
