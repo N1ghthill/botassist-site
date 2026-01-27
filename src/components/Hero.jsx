@@ -42,6 +42,10 @@ export default function Hero() {
             </Link>
           </div>
 
+          <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-12">
+            Este site é <span className="font-semibold text-gray-700">software livre (MIT)</span>. Contribuições são bem-vindas.
+          </p>
+
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
             <div className="text-center">

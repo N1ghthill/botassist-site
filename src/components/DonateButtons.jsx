@@ -100,7 +100,7 @@ export default function DonateButtons({
           className={`${baseButton} ${sizeClasses} ${focusOffset} ${sponsorsClasses}`}
         >
           <Coffee className="h-5 w-5 mr-2" />
-          Apoiar no GitHub
+          Doar no GitHub
         </a>
 
         {pixCopyText ? (
@@ -170,7 +170,7 @@ export default function DonateButtons({
                       className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-gray-900 text-white font-semibold hover:bg-black transition-colors focus-ring"
                     >
                       <HeartHandshake className="h-5 w-5 mr-2" />
-                      Ver no GitHub
+                      Abrir GitHub Sponsors
                     </a>
                   </div>
                 </div>

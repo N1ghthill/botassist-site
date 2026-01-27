@@ -10,8 +10,8 @@ const footerLinks = {
     { label: 'Download', href: '/#download' }
   ],
   Recursos: [
-    { label: 'Documentação', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
-    { label: 'GitHub', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
+    { label: 'Repositório do site', href: 'https://github.com/N1ghthill/botassist-site' },
+    { label: 'Repositório do app', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
     { label: 'FAQ', href: '/#faq' },
     { label: 'Relatar problema', href: '/#report-issues' }
   ],
@@ -23,7 +23,8 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { icon: Github, label: 'GitHub', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
+  { icon: Github, label: 'GitHub (site)', href: 'https://github.com/N1ghthill/botassist-site' },
+  { icon: Github, label: 'GitHub (app)', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
   { icon: Mail, label: 'Email', href: 'mailto:irving@ruas.dev.br' }
 ]
 
@@ -42,13 +43,12 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              A ferramenta definitiva para automatizar conversas no WhatsApp com IA inteligente. 
-              Seguro, confiável e fácil de usar.
+              Site oficial do BotAssist WhatsApp. Este repositório é software livre: ideias e contribuições são bem-vindas.
             </p>
             <div className="mb-6 rounded-2xl border border-gray-800 bg-gray-800/40 p-4">
-              <div className="text-sm font-bold text-gray-100">Curtiu o BotAssist?</div>
+              <div className="text-sm font-bold text-gray-100">Curtiu o projeto?</div>
               <div className="text-xs text-gray-400 mt-1">
-                Apoie com um café (opcional) — ajuda a manter builds e melhorias.
+                Você pode contribuir com código/ideias ou doar (opcional) para manter o projeto vivo.
               </div>
               <DonateButtons
                 className="mt-3"

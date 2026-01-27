@@ -1,6 +1,7 @@
 {
   "name": "botassist-site",
   "version": "1.0.0",
+  "license": "MIT",
   "private": true,
   "engines": {
     "node": ">=18"

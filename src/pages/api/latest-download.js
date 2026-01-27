@@ -7,16 +7,60 @@ const PLATFORM_MANIFEST = {
   linux: 'latest-linux.yml'
 }
 
+function stripYamlQuotes(value) {
+  return value.trim().replace(/^['"]|['"]$/g, '')
+}
+
 function parseYamlScalar(yamlText, key) {
   const match = yamlText.match(new RegExp(`^${key}:\\s*(.+)\\s*$`, 'm'))
   if (!match) return null
-  return match[1].trim().replace(/^['"]|['"]$/g, '')
+  return stripYamlQuotes(match[1])
+}
+
+function parseYamlFirstFileUrl(yamlText) {
+  const lines = yamlText.split(/\r?\n/)
+  const filesLineIndex = lines.findIndex((line) => /^\s*files:\s*$/.test(line))
+  if (filesLineIndex === -1) return null
+
+  const filesIndent = (lines[filesLineIndex].match(/^\s*/) || [''])[0].length
+
+  let inFirstEntry = false
+  for (let index = filesLineIndex + 1; index < lines.length; index++) {
+    const line = lines[index]
+    if (!line.trim()) continue
+
+    const indent = (line.match(/^\s*/) || [''])[0].length
+    if (indent <= filesIndent) break
+
+    const trimmed = line.trim()
+    if (trimmed.startsWith('-')) {
+      if (inFirstEntry) break
+      inFirstEntry = true
+
+      const inlineUrlMatch = trimmed.match(/^-+\s*url:\s*(.+)\s*$/)
+      if (inlineUrlMatch) return stripYamlQuotes(inlineUrlMatch[1])
+      continue
+    }
+
+    if (!inFirstEntry) continue
+
+    const urlMatch = trimmed.match(/^url:\s*(.+)\s*$/)
+    if (urlMatch) return stripYamlQuotes(urlMatch[1])
+  }
+
+  return null
 }
 
 function encodePath(path) {
   return path
     .split('/')
-    .map((segment) => encodeURIComponent(segment))
+    .map((segment) => {
+      try {
+        return encodeURIComponent(decodeURIComponent(segment))
+      } catch {
+        return encodeURIComponent(segment)
+      }
+    })
     .join('/')
 }
 
@@ -40,14 +84,29 @@ export default async function handler(req, res) {
   const fallbackUrl = `https://github.com/${OWNER}/${REPO}/releases/latest`
 
   try {
-    const response = await fetch(manifestUrl, { redirect: 'follow' })
+    const response = await fetch(manifestUrl, {
+      redirect: 'follow',
+      headers: {
+        Accept: 'application/octet-stream',
+        'User-Agent': 'botassist-site'
+      }
+    })
     if (!response.ok) {
       res.status(200).json({ platform, url: fallbackUrl, version: null, path: null })
       return
     }
 
     const text = await response.text()
-    const path = parseYamlScalar(text, 'path')
+    const contentType = response.headers.get('content-type') || ''
+    if (contentType.includes('text/html')) {
+      res.status(200).json({ platform, url: fallbackUrl, version: null, path: null })
+      return
+    }
+
+    const path =
+      parseYamlScalar(text, 'path') ||
+      parseYamlScalar(text, 'file') ||
+      parseYamlFirstFileUrl(text)
     const version = parseYamlScalar(text, 'version')
 
     if (!path) {
@@ -61,4 +120,3 @@ export default async function handler(req, res) {
     res.status(200).json({ platform, url: fallbackUrl, version: null, path: null })
   }
 }
-

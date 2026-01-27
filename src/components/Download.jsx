@@ -71,7 +71,12 @@ const Download = () => {
           {downloads.map((item, index) => {
             const Icon = item.icon
             const release = releaseByPlatform[item.platform]
-            const versionLabel = release?.version ? `v${release.version}` : 'Última versão'
+            const versionRaw = release?.version
+            const versionLabel = versionRaw
+              ? versionRaw.startsWith('v')
+                ? versionRaw
+                : `v${versionRaw}`
+              : 'Última versão'
             const fallbackHref = 'https://github.com/N1ghthill/botassist-whatsapp/releases/latest'
             const href = release?.url || fallbackHref
             const hasLoaded = Boolean(release)
@@ -115,14 +120,14 @@ const Download = () => {
             <div className="flex flex-col lg:flex-row lg:items-center gap-8">
               <div className="flex-1">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                  Apoie o projeto (opcional)
+                  Apoie o projeto (doação opcional)
                 </h3>
                 <p className="text-gray-700 mt-3 max-w-2xl">
-                  O BotAssist é gratuito. Se ele te ajudou, sua doação mantém o projeto vivo (builds, melhorias e tempo
-                  de manutenção).
+                  Este repositório é o site, mas o objetivo é o mesmo: apoiar um software livre, gratuito e de qualidade.
+                  Se o BotAssist te ajudou, sua doação contribui com builds, melhorias e tempo de manutenção.
                 </p>
                 <p className="text-sm text-gray-600 mt-4">
-                  Doar não libera “benefícios” no app — é só apoio para continuar evoluindo.
+                  Prefere não doar? Sem problema: contribua com ideias ou código no GitHub.
                 </p>
               </div>
               <div className="flex-1">
