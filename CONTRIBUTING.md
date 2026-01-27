@@ -8,13 +8,42 @@ Este repositório é **somente o site** (landing page). O aplicativo desktop fic
 
 ## Como contribuir
 
-- Abra uma issue explicando o problema/ideia (principalmente para mudanças maiores).
-- Faça um fork e crie uma branch a partir do `main`.
-- Rode localmente:
-  - `npm install`
-  - `npm run lint`
-  - `npm run build`
-- Abra um Pull Request descrevendo o que mudou e como testar.
+### 1) Abra uma issue (recomendado)
+
+Principalmente para mudanças maiores, abre uma issue explicando:
+
+- o problema/objetivo
+- como reproduzir (quando for bug)
+- sugestões de solução (se tiver)
+
+### 2) Faça um fork e crie uma branch
+
+- Crie uma branch a partir do `main` (ex.: `feat/minha-ideia` ou `fix/bug-x`).
+
+### 3) Rode localmente
+
+```bash
+npm ci
+npm run lint
+npm run build
+```
+
+### 4) Abra um Pull Request
+
+Descreva claramente:
+
+- o que mudou e por quê
+- como testar
+- prints (quando alterar UI)
+
+## Boas práticas
+
+- Mantenha o PR pequeno e focado.
+- Se a mudança afetar copy/textos, mantenha o tom alinhado com a filosofia do projeto (software livre e colaboração).
+
+## Código de conduta
+
+Ao participar, você concorda em seguir `CODE_OF_CONDUCT.md`.
 
 ## Objetivo do projeto
 

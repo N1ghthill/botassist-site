@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🖥️ Problemas do app (botassist-whatsapp)
+    url: https://github.com/N1ghthill/botassist-whatsapp/issues
+    about: Para bugs/ideias do aplicativo desktop.
+  - name: ✉️ Contato privado (segurança/sensível)
+    url: mailto:irving@ruas.dev.br
+    about: Para assuntos sensíveis (ex.: segurança, dados pessoais).

@@ -1,0 +1,51 @@
+name: 🐛 Bug (site)
+description: Reporte um problema no BotAssist Site (este repositório).
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por ajudar a melhorar o projeto.
+
+        Se o problema for do **aplicativo**, use: https://github.com/N1ghthill/botassist-whatsapp/issues
+  - type: input
+    id: url
+    attributes:
+      label: URL / Página
+      description: Em qual página do site aconteceu?
+      placeholder: "Ex.: https://botassist.ruas.dev.br/#download"
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passo a passo para reproduzir
+      description: Como reproduzir o problema?
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+      placeholder: "O que deveria acontecer?"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado atual
+      placeholder: "O que está acontecendo?"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente (opcional)
+      description: Navegador/OS e qualquer detalhe relevante.
+      placeholder: "Ex.: Chrome 121 • Windows 11"
+    validations:
+      required: false
