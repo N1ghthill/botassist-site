@@ -5,10 +5,37 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
   
   body {
     @apply text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2;
+  }
+
+  .legal-prose {
+    @apply text-gray-700 leading-relaxed;
+  }
+
+  .legal-prose h2 {
+    @apply mt-10 text-2xl font-bold text-gray-900;
+  }
+
+  .legal-prose p {
+    @apply mt-4;
+  }
+
+  .legal-prose ul {
+    @apply mt-4 list-disc pl-5 space-y-2;
+  }
+
+  .legal-prose a {
+    @apply text-primary-700 underline underline-offset-4 decoration-primary-300 hover:text-primary-800 hover:decoration-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2;
   }
 }
 

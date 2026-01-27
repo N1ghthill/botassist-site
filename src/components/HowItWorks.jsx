@@ -1,4 +1,5 @@
 import { Download, Settings, MessageSquare, Zap } from 'lucide-react'
+import Link from 'next/link'
 
 const steps = [
   {
@@ -83,12 +84,12 @@ export default function HowItWorks() {
             <p className="text-gray-600 mb-6">
               Milhares já estão usando o BotAssist para automatizar suas conversas no WhatsApp
             </p>
-            <a
-              href="#download"
-              className="inline-flex items-center px-8 py-4 rounded-xl bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl"
+            <Link
+              href="/#download"
+              className="inline-flex items-center px-8 py-4 rounded-xl bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl focus-ring"
             >
               Baixar Agora - Grátis
-            </a>
+            </Link>
           </div>
         </div>
       </div>

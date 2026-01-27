@@ -21,7 +21,7 @@ export default function Testimonials() {
             href="https://github.com/N1ghthill/botassist-whatsapp/issues"
             target="_blank"
             rel="noreferrer"
-            className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+            className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 focus-ring"
           >
             <div className="text-primary-600 mb-4">
               <Github className="h-8 w-8" />
@@ -34,7 +34,7 @@ export default function Testimonials() {
 
           <a
             href="mailto:irving@ruas.dev.br?subject=BotAssist%20-%20Relato%20de%20problema"
-            className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+            className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 focus-ring"
           >
             <div className="text-primary-600 mb-4">
               <Mail className="h-8 w-8" />

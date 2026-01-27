@@ -1,4 +1,5 @@
 import { MessageSquare, Shield, Zap, ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -25,20 +26,20 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <a
-              href="#download"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+            <Link
+              href="/#download"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl focus-ring"
             >
               Download Gratuito
               <ArrowRight className="ml-3 h-5 w-5" />
-            </a>
-            <a
-              href="#features"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-gray-800 font-semibold border-2 border-gray-200 hover:border-primary-300 hover:bg-gray-50 transition-colors"
+            </Link>
+            <Link
+              href="/#features"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-gray-800 font-semibold border-2 border-gray-200 hover:border-primary-300 hover:bg-gray-50 transition-colors focus-ring"
             >
               <Zap className="mr-3 h-5 w-5" />
               Ver Funcionalidades
-            </a>
+            </Link>
           </div>
 
           {/* Stats */}

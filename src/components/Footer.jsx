@@ -4,21 +4,21 @@ import DonateButtons from './DonateButtons'
 
 const footerLinks = {
   Produto: [
-    { label: 'Funcionalidades', href: '#features' },
-    { label: 'Como Funciona', href: '#how-it-works' },
-    { label: 'Screenshots', href: '#screenshots' },
-    { label: 'Download', href: '#download' }
+    { label: 'Funcionalidades', href: '/#features' },
+    { label: 'Como Funciona', href: '/#how-it-works' },
+    { label: 'Screenshots', href: '/#screenshots' },
+    { label: 'Download', href: '/#download' }
   ],
   Recursos: [
     { label: 'Documentação', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
     { label: 'GitHub', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Relatar problema', href: '#report-issues' }
+    { label: 'FAQ', href: '/#faq' },
+    { label: 'Relatar problema', href: '/#report-issues' }
   ],
   Legal: [
     { label: 'Termos de Uso', href: '/terms' },
     { label: 'Política de Privacidade', href: '/privacy' },
-    { label: 'Licença', href: 'https://github.com/N1ghthill/botassist-whatsapp' }
+    { label: 'Licença', href: 'https://github.com/N1ghthill/botassist-site/blob/main/LICENSE' }
   ]
 }
 
@@ -45,15 +45,25 @@ export default function Footer() {
               A ferramenta definitiva para automatizar conversas no WhatsApp com IA inteligente. 
               Seguro, confiável e fácil de usar.
             </p>
-            <div className="mb-6">
-              <DonateButtons buttonsClassName="justify-start" />
+            <div className="mb-6 rounded-2xl border border-gray-800 bg-gray-800/40 p-4">
+              <div className="text-sm font-bold text-gray-100">Curtiu o BotAssist?</div>
+              <div className="text-xs text-gray-400 mt-1">
+                Apoie com um café (opcional) — ajuda a manter builds e melhorias.
+              </div>
+              <DonateButtons
+                className="mt-3"
+                theme="dark"
+                size="sm"
+                layout="stack"
+                buttonsClassName="items-stretch justify-start"
+              />
             </div>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
-                  className="h-10 w-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors"
+                  className="h-10 w-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors focus-ring"
                   aria-label={social.label}
                 >
                   <social.icon className="h-5 w-5" />
@@ -74,14 +84,16 @@ export default function Footer() {
                     {link.href.startsWith('/') ? (
                       <Link
                         href={link.href}
-                        className="text-gray-400 hover:text-white transition-colors"
+                        className="text-gray-400 hover:text-white transition-colors focus-ring rounded-md"
                       >
                         {link.label}
                       </Link>
                     ) : (
                       <a
                         href={link.href}
-                        className="text-gray-400 hover:text-white transition-colors"
+                        target={link.href.startsWith('http') ? '_blank' : undefined}
+                        rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
+                        className="text-gray-400 hover:text-white transition-colors focus-ring rounded-md"
                       >
                         {link.label}
                       </a>
@@ -97,14 +109,22 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2025 BotAssist. Desenvolvido por Irving Ruas —{' '}
-              <a href="https://ruas.dev.br" className="text-primary-400 hover:text-primary-300">
+              © {new Date().getFullYear()} BotAssist. Desenvolvido por Irving Ruas —{' '}
+              <a
+                href="https://ruas.dev.br"
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary-400 hover:text-primary-300 focus-ring rounded-md"
+              >
                 ruas.dev.br
               </a>
               {' '}•{' '}
-              <a href="#report-issues" className="text-primary-400 hover:text-primary-300">
+              <Link
+                href="/#report-issues"
+                className="text-primary-400 hover:text-primary-300 focus-ring rounded-md"
+              >
                 Relate problemas
-              </a>
+              </Link>
             </div>
             <div className="flex items-center space-x-6">
               <div className="flex items-center text-gray-400 text-sm">

@@ -83,10 +83,13 @@ const Download = () => {
                 : 'Abrir downloads'
 
             return (
-              <div key={index} className="bg-white rounded-2xl shadow-xl p-6">
+              <div
+                key={index}
+                className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow"
+              >
                 <div className="flex items-center justify-between mb-4">
                   <Icon className="h-10 w-10 text-gray-700" />
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-semibold">
                     {versionLabel}
                   </span>
                 </div>
@@ -97,7 +100,7 @@ const Download = () => {
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full inline-flex items-center justify-center font-bold py-3 px-4 rounded-lg transition-colors bg-blue-600 hover:bg-blue-700 text-white"
+                  className="w-full inline-flex items-center justify-center font-bold py-3 px-4 rounded-xl transition-colors bg-primary-600 hover:bg-primary-700 text-white focus-ring"
                 >
                   <DownloadIcon className="inline-block mr-2 h-5 w-5" />
                   {buttonLabel}
@@ -107,15 +110,25 @@ const Download = () => {
           })}
         </div>
 
-        <div className="mt-14 text-center">
-          <div className="inline-block bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">
-              Apoie o projeto (opcional)
-            </h3>
-            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              O BotAssist é gratuito. Se ele te ajudou, você pode apoiar com um cafezinho para manter o projeto vivo.
-            </p>
-            <DonateButtons />
+        <div className="mt-16">
+          <div className="rounded-3xl border border-amber-200/70 bg-gradient-to-br from-amber-50 via-yellow-50 to-white p-8 md:p-10 shadow-sm">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+              <div className="flex-1">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                  Apoie o projeto (opcional)
+                </h3>
+                <p className="text-gray-700 mt-3 max-w-2xl">
+                  O BotAssist é gratuito. Se ele te ajudou, sua doação mantém o projeto vivo (builds, melhorias e tempo
+                  de manutenção).
+                </p>
+                <p className="text-sm text-gray-600 mt-4">
+                  Doar não libera “benefícios” no app — é só apoio para continuar evoluindo.
+                </p>
+              </div>
+              <div className="flex-1">
+                <DonateButtons theme="light" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
