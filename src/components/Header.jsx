@@ -19,20 +19,16 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-4">
-            <div className="h-12 w-12 rounded-2xl bg-white shadow-lg shadow-primary-500/10 ring-1 ring-gray-200/70 flex items-center justify-center">
-              <Image src="/icon.png" alt="BotAssist" width={40} height={40} className="h-10 w-10" />
-            </div>
-            <div className="flex flex-col">
+          <Link href="/" className="flex items-center">
+            <div className="rounded-2xl bg-white/90 px-4 py-2 shadow-lg shadow-primary-500/10 ring-1 ring-gray-200/70">
               <Image
                 src="/botassist_logo.png"
                 alt="BotAssist"
-                width={180}
-                height={72}
-                className="h-8 w-auto"
+                width={220}
+                height={88}
+                className="h-9 w-auto sm:h-10"
                 priority
               />
-              <span className="text-xs font-semibold text-primary-600 tracking-wide">WhatsApp</span>
             </div>
           </Link>
 
