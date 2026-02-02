@@ -17,16 +17,16 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100/70">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-14 sm:h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="rounded-2xl bg-white/90 px-4 py-2 shadow-lg shadow-primary-500/10 ring-1 ring-gray-200/70">
+            <div className="rounded-2xl bg-white px-3 sm:px-4 py-1 shadow-lg shadow-primary-500/10 ring-1 ring-gray-200/70">
               <Image
                 src="/botassist_logo.png"
                 alt="BotAssist"
-                width={220}
-                height={88}
-                className="h-9 w-auto sm:h-10"
+                width={420}
+                height={168}
+                className="h-12 w-auto sm:h-14"
                 priority
               />
             </div>
