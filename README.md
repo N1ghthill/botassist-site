@@ -15,7 +15,7 @@ Links rápidos:
 - 🤝 Contribuir: `CONTRIBUTING.md`
 - ☕ Doar: `https://github.com/sponsors/N1ghthill`
 
-![Preview do site](public/screenshots/dashboard-light.png)
+![Preview do site](public/screenshots/dashboard.png)
 
 ## 🧭 Índice
 
@@ -58,6 +58,8 @@ Se você quiser contribuir, fique à vontade — eu faço a minha humilde parte 
 - `src/pages`: páginas e rotas (inclui `/api/latest-download`)
 - `src/components`: seções da landing page
 - `public/screenshots`: imagens usadas no site/README
+  - `public/screenshots/old`: capturas antigas preservadas como referência
+- `public/icon.png`, `public/botassist_logo.png`, `public/ruas_logo.png`: identidade visual do BotAssist
 
 <a id="desenvolvimento-local"></a>
 ## 🛠️ Desenvolvimento local
@@ -99,6 +101,7 @@ O site busca os arquivos da **última release** do repositório do app (`botassi
 - Linux: `latest-linux.yml`
 
 Quando você cria e publica uma release no `botassist-whatsapp`, os botões de download passam a apontar automaticamente para os assets da release.
+Se algum manifest não estiver disponível, o botão cai para a página de releases.
 
 ## 🧭 Contato / Problemas
 

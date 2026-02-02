@@ -24,7 +24,6 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { icon: Github, label: 'GitHub (site)', href: 'https://github.com/N1ghthill/botassist-site' },
   { icon: Github, label: 'GitHub (app)', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
   { icon: Mail, label: 'Email', href: 'mailto:irving@ruas.dev.br' }
 ]
@@ -37,8 +36,8 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="h-11 w-11 rounded-2xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center">
-                <Image src="/icon.png" alt="BotAssist" width={36} height={36} className="h-9 w-9" />
+              <div className="h-12 w-12 rounded-2xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center">
+                <Image src="/icon.png" alt="BotAssist" width={40} height={40} className="h-10 w-10" />
               </div>
               <div>
                 <span className="text-2xl font-bold font-display">BotAssist</span>
@@ -73,8 +72,10 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <div className="mt-6 flex items-center gap-3 text-xs text-gray-500">
-              <Image src="/ruas_logo.png" alt="Ruas.dev" width={80} height={32} className="h-6 w-auto" />
+            <div className="mt-6 inline-flex items-center gap-3 rounded-full bg-white/10 px-3 py-2 text-xs text-gray-400">
+              <span className="rounded-full bg-white px-2 py-1">
+                <Image src="/ruas_logo.png" alt="Ruas.dev" width={110} height={44} className="h-8 w-auto" />
+              </span>
               <span>Identidade e desenvolvimento por Ruas.dev</span>
             </div>
           </div>

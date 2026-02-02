@@ -1,4 +1,4 @@
-import { Shield, Zap, ArrowRight } from 'lucide-react'
+import { Shield, Zap, ArrowRight, ShieldCheck, Layers, Sliders, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -68,37 +68,106 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Hero Image/Preview */}
+        {/* Hero Highlights */}
         <div className="mt-20 max-w-6xl mx-auto">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/60">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-white to-secondary-500/10 animate-gradient"></div>
-            <div className="relative bg-white p-6 sm:p-8">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="h-3 w-3 rounded-full bg-red-500"></div>
-                <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                <div className="h-3 w-3 rounded-full bg-green-500"></div>
-                <div className="ml-auto flex items-center gap-2 text-xs font-semibold text-gray-500">
-                  <Image src="/icon.png" alt="BotAssist" width={18} height={18} className="h-4 w-4" />
-                  App BotAssist
+          <div className="relative rounded-[32px] overflow-hidden border border-white/70 bg-white/80 shadow-[0_40px_90px_-50px_rgba(15,23,42,0.35)]">
+            <div className="absolute -top-24 -right-16 h-56 w-56 bg-primary-400/25 blur-3xl"></div>
+            <div className="absolute -bottom-24 -left-16 h-56 w-56 bg-secondary-400/20 blur-3xl"></div>
+            <div className="relative p-8 lg:p-10 grid gap-10 lg:grid-cols-[1.35fr_0.65fr]">
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-primary-700 font-semibold shadow-sm ring-1 ring-gray-200/70">
+                  <Sparkles className="h-4 w-4" />
+                  Nova identidade BotAssist
+                </div>
+
+                <div className="mt-6 flex flex-col sm:flex-row gap-6 items-start">
+                  <div className="rounded-3xl bg-white p-4 shadow-xl ring-1 ring-gray-200/70">
+                    <Image
+                      src="/botassist_logo.png"
+                      alt="BotAssist"
+                      width={260}
+                      height={160}
+                      className="h-20 sm:h-24 w-auto"
+                    />
+                  </div>
+                  <div className="max-w-md">
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">
+                      Seu bot com identidade forte e foco em resultado
+                    </h3>
+                    <p className="text-gray-600 mt-3">
+                      Feito para quem precisa de automacao confiavel, com configuracao clara e controle total sobre o WhatsApp.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                  {[
+                    {
+                      icon: ShieldCheck,
+                      title: 'Anti-ban',
+                      description: 'Camadas de seguranca e limites inteligentes.'
+                    },
+                    {
+                      icon: Layers,
+                      title: 'Perfis',
+                      description: 'Troque de agentes, prompts e modelos em segundos.'
+                    },
+                    {
+                      icon: Sliders,
+                      title: 'Ajustes finos',
+                      description: 'Controle grupos, acesso e comportamento do bot.'
+                    }
+                  ].map((item) => {
+                    const Icon = item.icon
+                    return (
+                      <div
+                        key={item.title}
+                        className="rounded-2xl border border-gray-200/70 bg-white/90 p-4 shadow-sm"
+                      >
+                        <div className="h-10 w-10 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center mb-3">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <div className="text-sm font-semibold text-gray-900">{item.title}</div>
+                        <p className="text-xs text-gray-600 mt-1">{item.description}</p>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
-              <div className="relative aspect-[16/10] rounded-2xl bg-slate-950/5 border border-gray-200/70 overflow-hidden">
-                <Image
-                  src="/screenshots/dashboard.png"
-                  alt="Dashboard BotAssist"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 1024px"
-                  className="object-contain"
-                />
-              </div>
-              <div className="mt-6 text-center">
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                  Interface moderna com foco no controle total
-                </h3>
-                <p className="text-gray-600">
-                  Tudo o que você precisa para operar o bot com segurança, clareza e performance.
-                </p>
+
+              <div className="space-y-4">
+                <div className="rounded-2xl border border-gray-200/70 bg-white/90 p-5 shadow-sm">
+                  <div className="text-xs uppercase tracking-[0.2em] text-gray-500">Setup rapido</div>
+                  <div className="mt-4 space-y-3 text-sm text-gray-700">
+                    <div className="flex items-center gap-3">
+                      <span className="h-2 w-2 rounded-full bg-primary-600"></span>
+                      Instale e conecte o WhatsApp em poucos minutos.
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="h-2 w-2 rounded-full bg-primary-600"></span>
+                      Escolha o perfil, o modelo e o tom de voz.
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="h-2 w-2 rounded-full bg-primary-600"></span>
+                      Bot rodando 24/7 com monitoramento facil.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-gray-200/70 bg-gradient-to-br from-primary-600 to-secondary-600 text-white p-5 shadow-lg">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-xs uppercase tracking-[0.2em] text-white/70">Disponivel agora</div>
+                      <div className="text-2xl font-bold font-display mt-1">BotAssist 4.x</div>
+                    </div>
+                    <div className="h-10 w-10 rounded-2xl bg-white/15 flex items-center justify-center">
+                      <Image src="/icon.png" alt="BotAssist" width={24} height={24} className="h-6 w-6" />
+                    </div>
+                  </div>
+                  <p className="text-sm text-white/80 mt-4">
+                    Atualizacoes constantes, identidade profissional e pronto para seu anuncio.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
