@@ -1,5 +1,6 @@
-import { MessageSquare, Shield, Zap, ArrowRight } from 'lucide-react'
+import { Shield, Zap, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -69,21 +70,34 @@ export default function Hero() {
 
         {/* Hero Image/Preview */}
         <div className="mt-20 max-w-6xl mx-auto">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 animate-gradient"></div>
-            <div className="relative bg-white p-8">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/60">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-white to-secondary-500/10 animate-gradient"></div>
+            <div className="relative bg-white p-6 sm:p-8">
               <div className="flex items-center space-x-4 mb-6">
                 <div className="h-3 w-3 rounded-full bg-red-500"></div>
                 <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
                 <div className="h-3 w-3 rounded-full bg-green-500"></div>
+                <div className="ml-auto flex items-center gap-2 text-xs font-semibold text-gray-500">
+                  <Image src="/icon.png" alt="BotAssist" width={18} height={18} className="h-4 w-4" />
+                  App BotAssist
+                </div>
               </div>
-              <div className="text-center">
-                <MessageSquare className="h-24 w-24 text-primary-400 mx-auto mb-6 animate-float" />
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                  Interface Gráfica Intuitiva
+              <div className="relative aspect-[16/10] rounded-2xl bg-slate-950/5 border border-gray-200/70 overflow-hidden">
+                <Image
+                  src="/screenshots/dashboard.png"
+                  alt="Dashboard BotAssist"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 1024px"
+                  className="object-contain"
+                />
+              </div>
+              <div className="mt-6 text-center">
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                  Interface moderna com foco no controle total
                 </h3>
                 <p className="text-gray-600">
-                  Configure seu bot em minutos com nossa interface amigável
+                  Tudo o que você precisa para operar o bot com segurança, clareza e performance.
                 </p>
               </div>
             </div>

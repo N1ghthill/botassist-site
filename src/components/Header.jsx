@@ -1,5 +1,6 @@
-import { Menu, X, MessageSquare, Download } from 'lucide-react'
+import { Menu, X, Download } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Header() {
@@ -14,14 +15,16 @@ export default function Header() {
   ]
 
   return (
-    <header className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+    <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100/70">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <MessageSquare className="h-8 w-8 text-primary-600" />
-            <div>
-              <span className="text-2xl font-bold text-gray-900">BotAssist</span>
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="h-10 w-10 rounded-2xl bg-white shadow-md shadow-primary-500/10 ring-1 ring-gray-200/60 flex items-center justify-center">
+              <Image src="/icon.png" alt="BotAssist" width={32} height={32} className="h-8 w-8" />
+            </div>
+            <div className="leading-tight">
+              <span className="text-2xl font-bold text-gray-900 font-display">BotAssist</span>
               <span className="text-xs font-semibold text-primary-600 ml-1">WhatsApp</span>
             </div>
           </Link>

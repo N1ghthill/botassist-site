@@ -1,5 +1,6 @@
-import { MessageSquare, Github, Mail, Globe } from 'lucide-react'
+import { Github, Mail, Globe } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import DonateButtons from './DonateButtons'
 
 const footerLinks = {
@@ -35,11 +36,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <MessageSquare className="h-8 w-8 text-primary-400" />
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="h-11 w-11 rounded-2xl bg-white/10 ring-1 ring-white/10 flex items-center justify-center">
+                <Image src="/icon.png" alt="BotAssist" width={36} height={36} className="h-9 w-9" />
+              </div>
               <div>
-                <span className="text-2xl font-bold">BotAssist</span>
-                <span className="text-primary-400 text-sm font-semibold ml-1">WhatsApp</span>
+                <span className="text-2xl font-bold font-display">BotAssist</span>
+                <span className="text-primary-300 text-sm font-semibold ml-1">WhatsApp</span>
               </div>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
@@ -69,6 +72,10 @@ export default function Footer() {
                   <social.icon className="h-5 w-5" />
                 </a>
               ))}
+            </div>
+            <div className="mt-6 flex items-center gap-3 text-xs text-gray-500">
+              <Image src="/ruas_logo.png" alt="Ruas.dev" width={80} height={32} className="h-6 w-auto" />
+              <span>Identidade e desenvolvimento por Ruas.dev</span>
             </div>
           </div>
 

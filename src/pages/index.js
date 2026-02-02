@@ -26,7 +26,7 @@ export default function Home() {
         <meta property="og:url" content={siteUrl} />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <div className="min-h-screen bg-white bg-[radial-gradient(1200px_600px_at_10%_-10%,rgba(63,132,89,0.18),transparent),radial-gradient(900px_500px_at_90%_0%,rgba(54,72,214,0.12),transparent)]">
         <Header />
         <main>
           <Hero />
