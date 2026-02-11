@@ -63,7 +63,7 @@ const Download = () => {
             Baixe o BotAssist Agora
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Totalmente gratuito. Comece em menos de 5 minutos.
+            100% gratuito para Windows, macOS e Linux. Comece com setup guiado em menos de 5 minutos.
           </p>
         </div>
 

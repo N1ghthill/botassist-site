@@ -6,14 +6,14 @@ const steps = [
     number: '01',
     icon: Download,
     title: 'Baixe e Instale',
-    description: 'Faça download do instalador para seu sistema operacional e instale em segundos.',
+    description: 'Faça download gratuito para Windows, macOS ou Linux e instale em segundos.',
     color: 'text-blue-600'
   },
   {
     number: '02',
     icon: Settings,
-    title: 'Configure',
-    description: 'Insira sua API Key da Groq, escolha o modelo e ajuste as preferências.',
+    title: 'Setup Básico Guiado',
+    description: 'Siga o onboarding amigável para API Key, owner, preferências e perfil inicial.',
     color: 'text-green-600'
   },
   {
@@ -26,8 +26,8 @@ const steps = [
   {
     number: '04',
     icon: Zap,
-    title: 'Automatize',
-    description: 'O BotAssist começa a responder automaticamente com IA inteligente.',
+    title: 'Ative os Agentes e Tools',
+    description: 'Personalize agentes e habilite tools para fluxos avançados com segurança.',
     color: 'text-orange-600'
   }
 ]
@@ -41,7 +41,7 @@ export default function HowItWorks() {
             Funciona em 4 Passos Simples
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Configure seu bot em menos de 5 minutos
+            Setup inicial guiado para começar rápido e evoluir com agentes e tools
           </p>
         </div>
 

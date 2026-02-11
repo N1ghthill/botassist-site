@@ -10,7 +10,7 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 font-semibold mb-8">
             <Shield className="h-4 w-4 mr-2" />
-            Modo Anti-Ban • Mais segurança
+            Atualização 4.1.11 • Setup guiado e mais segurança
           </div>
 
           {/* Main Heading */}
@@ -21,8 +21,8 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            BotAssist é a ferramenta gráfica que conecta seu WhatsApp à Groq AI com total segurança. 
-            Controle absoluto, modo anti-ban e configuração fácil.
+            BotAssist conecta seu WhatsApp à Groq AI com interface gráfica, tools poderosas e agentes personalizáveis.
+            Setup inicial guiado, operação profissional e download grátis para Windows, macOS e Linux.
           </p>
 
           {/* CTA Buttons */}
@@ -77,7 +77,7 @@ export default function Hero() {
               <div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-primary-700 font-semibold shadow-sm ring-1 ring-gray-200/70">
                   <Sparkles className="h-4 w-4" />
-                  Nova identidade BotAssist
+                  Novidades da release 4.1.11
                 </div>
 
                 <div className="mt-6 flex flex-col sm:flex-row gap-6 items-start">
@@ -92,10 +92,10 @@ export default function Hero() {
                   </div>
                   <div className="max-w-md">
                     <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">
-                      Seu bot com identidade forte e foco em resultado
+                      Bot mais poderoso, setup mais simples
                     </h3>
                     <p className="text-gray-600 mt-3">
-                      Feito para quem precisa de automacao confiavel, com configuracao clara e controle total sobre o WhatsApp.
+                      Feito para quem precisa de automação confiável, com configuração guiada e controle total sobre o WhatsApp.
                     </p>
                   </div>
                 </div>
@@ -141,15 +141,15 @@ export default function Hero() {
                   <div className="mt-4 space-y-3 text-sm text-gray-700">
                     <div className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-primary-600"></span>
-                      Instale e conecte o WhatsApp em poucos minutos.
+                      Siga o setup inicial com configuração básica guiada.
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-primary-600"></span>
-                      Escolha o perfil, o modelo e o tom de voz.
+                      Escolha agentes, modelos e tools com segurança.
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-primary-600"></span>
-                      Bot rodando 24/7 com monitoramento facil.
+                      Publique e rode no Windows, macOS ou Linux.
                     </div>
                   </div>
                 </div>
@@ -158,14 +158,14 @@ export default function Hero() {
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="text-xs uppercase tracking-[0.2em] text-white/70">Disponivel agora</div>
-                      <div className="text-2xl font-bold font-display mt-1">BotAssist 4.x</div>
+                      <div className="text-2xl font-bold font-display mt-1">BotAssist 4.1.11</div>
                     </div>
                     <div className="h-10 w-10 rounded-2xl bg-white/15 flex items-center justify-center">
                       <Image src="/icon.png" alt="BotAssist" width={24} height={24} className="h-6 w-6" />
                     </div>
                   </div>
                   <p className="text-sm text-white/80 mt-4">
-                    Atualizacoes constantes, identidade profissional e pronto para seu anuncio.
+                    Atualização focada em setup guiado, tools poderosas e agentes personalizáveis.
                   </p>
                 </div>
               </div>

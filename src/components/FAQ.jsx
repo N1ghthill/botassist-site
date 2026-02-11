@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     question: 'Preciso de conhecimento técnico?',
-    answer: 'Não! A interface gráfica torna tudo intuitivo. Basta seguir os passos: baixar, configurar API Key, escanear QR Code e pronto!',
+    answer: 'Não. O setup inicial agora é guiado e cobre configuração básica em etapas claras, desde API Key até conexão do WhatsApp.',
     icon: HelpCircle
   },
   {
@@ -25,6 +25,11 @@ const faqs = [
   {
     question: 'Quais sistemas operacionais são suportados?',
     answer: 'Windows 10/11, macOS 10.14+, e Linux (Ubuntu 20.04+, Fedora, etc). Downloads disponíveis para cada plataforma.',
+    icon: Zap
+  },
+  {
+    question: 'Posso personalizar agentes e usar tools?',
+    answer: 'Sim. Você pode criar agentes com prompts e modelos diferentes, além de habilitar tools de forma controlada para fluxos avançados.',
     icon: Zap
   },
   {

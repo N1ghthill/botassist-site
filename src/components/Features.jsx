@@ -1,4 +1,4 @@
-import { Shield, Settings, Users, Brain, Lock, Zap, Bell, Smartphone } from 'lucide-react'
+import { Shield, Settings, Users, Brain, Lock, Zap, Wrench, Smartphone } from 'lucide-react'
 
 const features = [
   {
@@ -11,14 +11,14 @@ const features = [
   {
     icon: Brain,
     title: 'Groq AI Integrada',
-    description: 'Respostas inteligentes usando os melhores modelos como LLaMA 3.3 70B. Totalmente configurável.',
+    description: 'Respostas inteligentes com modelos rápidos e de alta qualidade, em uma interface simples.',
     color: 'text-purple-600',
     bgColor: 'bg-purple-100'
   },
   {
     icon: Settings,
-    title: 'Interface Gráfica',
-    description: 'Controle tudo pelo Electron App: logs, QR Code, configurações. Nada de comandos complexos.',
+    title: 'Setup Guiado',
+    description: 'Configuração básica assistida em 4 etapas para conectar o bot sem complicação.',
     color: 'text-blue-600',
     bgColor: 'bg-blue-100'
   },
@@ -31,8 +31,8 @@ const features = [
   },
   {
     icon: Users,
-    title: 'Multi-Persona',
-    description: 'Configure diferentes personalidades (personas) para diferentes situações.',
+    title: 'Agentes Personalizáveis',
+    description: 'Crie perfis com prompts, modelo, estilo de resposta e roteamento por usuário/grupo.',
     color: 'text-yellow-600',
     bgColor: 'bg-yellow-100'
   },
@@ -44,16 +44,16 @@ const features = [
     bgColor: 'bg-orange-100'
   },
   {
-    icon: Bell,
-    title: 'Notificações em Tempo Real',
-    description: 'Logs atualizados instantaneamente. Saiba tudo o que seu bot está fazendo.',
+    icon: Wrench,
+    title: 'Tools Poderosas',
+    description: 'Web, arquivos e automações com controle do owner, auditoria local e operação segura.',
     color: 'text-indigo-600',
     bgColor: 'bg-indigo-100'
   },
   {
     icon: Smartphone,
     title: 'Multiplataforma',
-    description: 'Windows, macOS e Linux. Builds otimizados para cada sistema operacional.',
+    description: '100% grátis para Windows, macOS e Linux, com downloads dedicados por plataforma.',
     color: 'text-gray-600',
     bgColor: 'bg-gray-100'
   }

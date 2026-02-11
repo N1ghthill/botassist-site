@@ -7,6 +7,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
+    { label: 'Novidades', href: '/#release-highlights' },
     { label: 'Funcionalidades', href: '/#features' },
     { label: 'Como Funciona', href: '/#how-it-works' },
     { label: 'Screenshots', href: '/#screenshots' },
