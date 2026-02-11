@@ -27,6 +27,7 @@ Links rápidos:
 - [🧪 Build](#build)
 - [🚀 Deploy no Vercel](#deploy-no-vercel)
 - [📦 Releases e downloads](#releases-e-downloads)
+- [📰 Atualização 4.1.11](#atualizacao-411)
 - [🤝 Contribuindo](#contribuindo)
 - [☕ Apoie (doação opcional)](#apoie-doacao-opcional)
 - [📜 Licença](#licenca)
@@ -102,6 +103,20 @@ O site busca os arquivos da **última release** do repositório do app (`botassi
 
 Quando você cria e publica uma release no `botassist-whatsapp`, os botões de download passam a apontar automaticamente para os assets da release.
 Se algum manifest não estiver disponível, o botão cai para a página de releases.
+
+<a id="atualizacao-411"></a>
+## 📰 Atualização 4.1.11
+
+Data: **2026-02-11**
+
+Resumo do anúncio para o site:
+- Setup inicial com configuração básica guiada (fluxo amigável em 4 etapas).
+- Destaque para tools poderosas e suas funcionalidades com controle operacional.
+- Agentes personalizáveis para perfis, prompts e roteamento por usuário/grupo.
+- BotAssist segue gratuito para **Windows, macOS e Linux**.
+
+Referência editorial:
+- `RELEASE_NOTES.md`
 
 ## 🧭 Contato / Problemas
 
