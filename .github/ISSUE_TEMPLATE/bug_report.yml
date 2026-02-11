@@ -1,51 +1,52 @@
-name: 🐛 Bug (site)
-description: Reporte um problema no BotAssist Site (este repositório).
-title: "[Bug]: "
+name: "Bug report"
+description: Reportar falha/comportamento incorreto
+labels: ["type: bug", "status: ready", "priority: medium"]
+title: "[BUG] "
 body:
-  - type: markdown
+  - type: textarea
+    id: resumo
     attributes:
-      value: |
-        Obrigado por ajudar a melhorar o projeto.
+      label: Resumo do problema
+      description: O que está falhando?
+      placeholder: Descreva em 2-3 linhas.
+    validations:
+      required: true
 
-        Se o problema for do **aplicativo**, use: https://github.com/N1ghthill/botassist-whatsapp/issues
-  - type: input
-    id: url
-    attributes:
-      label: URL / Página
-      description: Em qual página do site aconteceu?
-      placeholder: "Ex.: https://botassist.ruas.dev.br/#download"
-    validations:
-      required: false
   - type: textarea
-    id: steps
+    id: passos
     attributes:
-      label: Passo a passo para reproduzir
-      description: Como reproduzir o problema?
+      label: Passos para reproduzir
+      description: Lista objetiva para reproduzir o erro.
       placeholder: |
-        1. ...
-        2. ...
-        3. ...
+        1. Ir para ...
+        2. Clicar em ...
+        3. Ver erro ...
     validations:
       required: true
+
   - type: textarea
-    id: expected
+    id: esperado
     attributes:
-      label: Resultado esperado
-      placeholder: "O que deveria acontecer?"
+      label: Comportamento esperado
     validations:
       required: true
+
   - type: textarea
-    id: actual
+    id: atual
     attributes:
-      label: Resultado atual
-      placeholder: "O que está acontecendo?"
+      label: Comportamento atual
     validations:
       required: true
+
   - type: input
-    id: environment
+    id: ambiente
     attributes:
-      label: Ambiente (opcional)
-      description: Navegador/OS e qualquer detalhe relevante.
-      placeholder: "Ex.: Chrome 121 • Windows 11"
-    validations:
-      required: false
+      label: Ambiente
+      description: SO, navegador/versão, Node, etc.
+      placeholder: Fedora 41, Chrome 131, Node 20
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências
+      description: Logs, screenshots, links, stacktrace.
