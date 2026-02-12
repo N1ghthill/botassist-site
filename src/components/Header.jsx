@@ -9,6 +9,7 @@ export default function Header() {
   const navItems = [
     { label: 'Novidades', href: '/#release-highlights' },
     { label: 'Funcionalidades', href: '/#features' },
+    { label: 'Possibilidades', href: '/#use-cases' },
     { label: 'Como Funciona', href: '/#how-it-works' },
     { label: 'Screenshots', href: '/#screenshots' },
     { label: 'FAQ', href: '/#faq' },

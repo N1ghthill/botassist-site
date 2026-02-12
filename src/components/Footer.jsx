@@ -6,6 +6,7 @@ import DonateButtons from './DonateButtons'
 const footerLinks = {
   Produto: [
     { label: 'Funcionalidades', href: '/#features' },
+    { label: 'Possibilidades de uso', href: '/#use-cases' },
     { label: 'Como Funciona', href: '/#how-it-works' },
     { label: 'Screenshots', href: '/#screenshots' },
     { label: 'Download', href: '/#download' }

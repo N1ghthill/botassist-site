@@ -2,16 +2,17 @@
 
 Registro editorial das novidades destacadas no site do BotAssist.
 
-## 4.1.11 - 2026-02-11
+## 4.1.14 - 2026-02-11
 
 ### Resumo curto
-Atualizacao focada em usabilidade e poder operacional: setup inicial guiado, tools robustas e agentes personalizaveis.
+Release de alinhamento do onboarding e operacao com owner por token, com sincronizacao bot -> UI e documentacao atualizada.
 
 ### Destaques para comunicacao
-- Setup inicial com configuracao basica guiada e fluxo amigavel em 4 etapas.
-- Tools poderosas para operacao avancada com controle e seguranca.
-- Agentes personalizaveis com perfis, prompts e roteamento por usuario/grupo.
+- Owner por token/comando no WhatsApp (`!owner <token>`).
+- Setup inicial alinhado ao novo fluxo de owner por token.
+- Sincronizacao automatica da interface quando o bot altera `settings`.
+- Documentacao atualizada para refletir o fluxo real de onboarding e operacao.
 - BotAssist continua 100% gratuito para Windows, macOS e Linux.
 
 ### Mensagem pronta (versao curta)
-BotAssist 4.1.11 chegou: setup inicial mais amigavel, tools mais poderosas e agentes personalizaveis para fluxos profissionais. Tudo de graca para Windows, macOS e Linux.
+BotAssist 4.1.14 chegou: owner por token no WhatsApp, setup alinhado ao fluxo real e interface sincronizada com o bot. Tudo de graca para Windows, macOS e Linux.

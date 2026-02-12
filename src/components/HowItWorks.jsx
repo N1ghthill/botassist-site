@@ -82,7 +82,7 @@ export default function HowItWorks() {
               Pronto para começar?
             </h3>
             <p className="text-gray-600 mb-6">
-              Milhares já estão usando o BotAssist para automatizar suas conversas no WhatsApp
+              Comece grátis e valide no seu próprio fluxo em poucos minutos.
             </p>
             <Link
               href="/#download"

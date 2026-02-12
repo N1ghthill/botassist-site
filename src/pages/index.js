@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import ReleaseHighlights from '../components/ReleaseHighlights'
 import Features from '../components/Features'
+import UseCases from '../components/UseCases'
 import HowItWorks from '../components/HowItWorks'
 import Screenshots from '../components/Screenshots'
 import Testimonials from '../components/Testimonials'
@@ -33,11 +34,12 @@ export default function Home() {
           <Hero />
           <ReleaseHighlights />
           <Features />
+          <UseCases />
           <HowItWorks />
           <Screenshots />
-          <Testimonials />
           <FAQ />
           <Download />
+          <Testimonials />
         </main>
         <Footer />
       </div>

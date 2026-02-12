@@ -1,25 +1,26 @@
 import { Sparkles, Wrench, Layers, Rocket } from 'lucide-react'
 import Link from 'next/link'
+import { releaseMeta } from '../lib/releaseMeta'
 
 const highlights = [
   {
     icon: Rocket,
-    title: 'Setup inicial mais amigável',
-    description: 'Agora com configuração básica guiada em 4 etapas para começar rápido.',
+    title: 'Owner por token no WhatsApp',
+    description: 'Defina owner por comando com token temporario para onboarding mais seguro.',
     color: 'text-blue-600',
     bgColor: 'bg-blue-100'
   },
   {
     icon: Wrench,
-    title: 'Tools poderosas',
-    description: 'Busca web, arquivos e automações com controles de segurança e aprovação.',
+    title: 'Setup alinhado ao fluxo real',
+    description: 'Etapa de owner atualizada para o metodo por token no setup inicial.',
     color: 'text-emerald-600',
     bgColor: 'bg-emerald-100'
   },
   {
     icon: Layers,
-    title: 'Agentes personalizáveis',
-    description: 'Perfis com prompts, modelos e roteamento por usuário ou grupo.',
+    title: 'Sincronizacao bot -> UI',
+    description: 'Alteracoes de configuracao feitas pelo bot aparecem automaticamente na interface.',
     color: 'text-violet-600',
     bgColor: 'bg-violet-100'
   }
@@ -34,14 +35,13 @@ export default function ReleaseHighlights() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 font-semibold">
                 <Sparkles className="h-4 w-4" />
-                Novidades da versão 4.1.11
+                Novidades da versao {releaseMeta.version}
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4">
-                Mais poder, mais simplicidade, sem custo
+                Fluxo de owner mais seguro e interface sincronizada
               </h2>
               <p className="text-gray-600 mt-3 max-w-2xl">
-                O BotAssist evoluiu no que importa para a operação diária: setup guiado, tools mais robustas
-                e fluxo profissional com agentes personalizáveis.
+                {releaseMeta.summary}
               </p>
             </div>
             <div className="flex-shrink-0">

@@ -1,6 +1,7 @@
 import { Shield, Zap, ArrowRight, ShieldCheck, Layers, Sliders, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { releaseMeta } from '../lib/releaseMeta'
 
 export default function Hero() {
   return (
@@ -10,7 +11,7 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 font-semibold mb-8">
             <Shield className="h-4 w-4 mr-2" />
-            Atualização 4.1.11 • Setup guiado e mais segurança
+            Atualizacao {releaseMeta.version} • {releaseMeta.badge}
           </div>
 
           {/* Main Heading */}
@@ -26,7 +27,7 @@ export default function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Link
               href="/#download"
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl focus-ring"
@@ -41,6 +42,12 @@ export default function Hero() {
               <Zap className="mr-3 h-5 w-5" />
               Ver Funcionalidades
             </Link>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-sm text-gray-600">
+            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Sem cadastro</span>
+            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Código aberto (MIT)</span>
+            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Download direto do GitHub Releases</span>
           </div>
 
           <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-12">
@@ -77,7 +84,7 @@ export default function Hero() {
               <div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-primary-700 font-semibold shadow-sm ring-1 ring-gray-200/70">
                   <Sparkles className="h-4 w-4" />
-                  Novidades da release 4.1.11
+                  Novidades da release {releaseMeta.version}
                 </div>
 
                 <div className="mt-6 flex flex-col sm:flex-row gap-6 items-start">
@@ -141,11 +148,11 @@ export default function Hero() {
                   <div className="mt-4 space-y-3 text-sm text-gray-700">
                     <div className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-primary-600"></span>
-                      Siga o setup inicial com configuração básica guiada.
+                      Gere um token de owner e reivindique no WhatsApp.
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-primary-600"></span>
-                      Escolha agentes, modelos e tools com segurança.
+                      Sincronizacao entre bot e UI para refletir ajustes em tempo real.
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-primary-600"></span>
@@ -158,14 +165,14 @@ export default function Hero() {
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="text-xs uppercase tracking-[0.2em] text-white/70">Disponivel agora</div>
-                      <div className="text-2xl font-bold font-display mt-1">BotAssist 4.1.11</div>
+                      <div className="text-2xl font-bold font-display mt-1">BotAssist {releaseMeta.version}</div>
                     </div>
                     <div className="h-10 w-10 rounded-2xl bg-white/15 flex items-center justify-center">
                       <Image src="/icon.png" alt="BotAssist" width={24} height={24} className="h-6 w-6" />
                     </div>
                   </div>
                   <p className="text-sm text-white/80 mt-4">
-                    Atualização focada em setup guiado, tools poderosas e agentes personalizáveis.
+                    {releaseMeta.summary}
                   </p>
                 </div>
               </div>

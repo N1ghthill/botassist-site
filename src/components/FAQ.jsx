@@ -4,7 +4,7 @@ import { useState } from 'react'
 const faqs = [
   {
     question: 'O BotAssist é seguro? Risco de ban?',
-    answer: 'Totalmente seguro! O modo anti-ban garante que o bot só responda quando mencionado e apenas em grupos autorizados. Usamos as melhores práticas recomendadas pela comunidade para evitar bloqueios.',
+    answer: 'O BotAssist foi projetado para reduzir risco com modo anti-ban, allowlists e controles de acesso. Ainda assim, qualquer automação no WhatsApp envolve risco operacional e depende da sua configuração e do uso responsável.',
     icon: Shield
   },
   {

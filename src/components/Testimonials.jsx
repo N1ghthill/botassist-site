@@ -6,13 +6,13 @@ export default function Testimonials() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Relate problemas e sugestões
+            Suporte e feedback da comunidade
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            O BotAssist é gratuito e evolui com feedback da comunidade. Se algo não funcionar, relate aqui.
+            O BotAssist evolui com feedback real de uso. Se encontrar bug ou tiver sugestão, use os canais abaixo.
           </p>
           <p className="text-sm text-gray-500 max-w-3xl mx-auto mt-4">
-            Não há garantia de suporte individual ou de compatibilidade com todas as máquinas/ambientes. Ainda assim, todo reporte bem detalhado ajuda muito.
+            Projeto gratuito e open source: respostas podem variar, mas relatos bem detalhados aceleram correções.
           </p>
         </div>
 
