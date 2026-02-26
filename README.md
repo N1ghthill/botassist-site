@@ -11,6 +11,8 @@ Este repositório contém o **site** (landing page) do **BotAssist WhatsApp** �
 
 Do MVP ao scale: a landing nasceu para validar interesse e evoluiu para canal contínuo de aquisição, suporte e distribuição.
 
+Contexto de pagamentos: este repositório não implementa billing diretamente, mas comunica produtos que operam com checkout e integrações de pagamentos.
+
 ## Case Summary
 - Problema: necessidade de centralizar narrativa de produto, downloads e documentação pública.
 - Solução: site oficial integrado ao fluxo de releases do app desktop.
