@@ -4,23 +4,23 @@ import { releaseMeta } from '../lib/releaseMeta'
 
 const highlights = [
   {
-    icon: Rocket,
-    title: 'Renderer com protocolo dedicado',
-    description: 'A interface agora roda em app://botassist/* com uma superficie mais controlada no Electron.',
+    icon: Wrench,
+    title: 'Tools mais seguras',
+    description: 'Filesystem e shell passaram a validar melhor paths e contexto de execucao para reduzir risco operacional.',
     color: 'text-blue-600',
     bgColor: 'bg-blue-100'
   },
   {
-    icon: Wrench,
-    title: 'shell.exec mais profissional',
-    description: 'Execucao validada por comando-base, sem shell composto, pipes ou redirecionamento.',
+    icon: Layers,
+    title: 'Runtime menos concentrado',
+    description: 'Approval flow e comandos operacionais sairam de pontos centrais do runtime sem mudar comportamento.',
     color: 'text-emerald-600',
     bgColor: 'bg-emerald-100'
   },
   {
-    icon: Layers,
-    title: 'Release e update validados',
-    description: 'Smoke do binario empacotado e pipeline mais madura para distribuicao nos tres sistemas.',
+    icon: Rocket,
+    title: 'Distribuicao mais verificavel',
+    description: 'A linha estavel agora fecha com verificacao automatica dos feeds e assets reais publicados.',
     color: 'text-violet-600',
     bgColor: 'bg-violet-100'
   }
@@ -38,7 +38,7 @@ export default function ReleaseHighlights() {
                 Novidades da versao {releaseMeta.version}
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4">
-                Release mais madura, distribuicao mais confiavel
+                Menos acoplamento, mais clareza operacional
               </h2>
               <p className="text-gray-600 mt-3 max-w-2xl">
                 {releaseMeta.summary}
