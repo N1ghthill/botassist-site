@@ -1,6 +1,7 @@
 import { Download as DownloadIcon, Monitor, Apple, Terminal } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import DonateButtons from './DonateButtons'
+import { releaseMeta } from '../lib/releaseMeta'
 
 const Download = () => {
   const downloads = useMemo(
@@ -9,22 +10,22 @@ const Download = () => {
         platform: 'windows',
         os: 'Windows',
         icon: Monitor,
-        fileSize: '85 MB',
-        requirements: 'Windows 10/11 64-bit'
+        artifact: releaseMeta.downloadFormats.windows,
+        requirements: releaseMeta.requirements.windows
       },
       {
         platform: 'mac',
         os: 'macOS',
         icon: Apple,
-        fileSize: '92 MB',
-        requirements: 'macOS 10.14+'
+        artifact: releaseMeta.downloadFormats.mac,
+        requirements: releaseMeta.requirements.mac
       },
       {
         platform: 'linux',
         os: 'Linux',
         icon: Terminal,
-        fileSize: '78 MB',
-        requirements: 'Ubuntu 20.04+ / Fedora 32+'
+        artifact: releaseMeta.downloadFormats.linux,
+        requirements: releaseMeta.requirements.linux
       }
     ],
     []
@@ -63,7 +64,7 @@ const Download = () => {
             Baixe o BotAssist Agora
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            100% gratuito para Windows, macOS e Linux. Comece com setup guiado em menos de 5 minutos.
+            Linha estavel {releaseMeta.version}, 100% gratuita para Windows, macOS e Linux. Comece com setup guiado em poucos minutos.
           </p>
         </div>
 
@@ -99,8 +100,13 @@ const Download = () => {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.os}</h3>
-                <p className="text-gray-600 mb-4">Tamanho: {item.fileSize}</p>
-                <p className="text-gray-600 mb-6">{item.requirements}</p>
+                <p className="text-gray-600 mb-2">Formato: {item.artifact}</p>
+                <p className="text-gray-600 mb-4">Requisitos: {item.requirements}</p>
+                <p className="text-sm text-gray-500 mb-6">
+                  {item.platform === 'linux'
+                    ? 'A release Linux publica AppImage, .deb e .rpm.'
+                    : 'O botao aponta para o asset oficial da release estavel.'}
+                </p>
                 <a
                   href={href}
                   target="_blank"
@@ -141,4 +147,4 @@ const Download = () => {
   )
 }
 
-export default Download  // ← ISSO É ESSENCIAL!
+export default Download

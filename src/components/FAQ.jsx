@@ -4,7 +4,7 @@ import { useState } from 'react'
 const faqs = [
   {
     question: 'O BotAssist é seguro? Risco de ban?',
-    answer: 'O BotAssist foi projetado para reduzir risco com modo anti-ban, allowlists e controles de acesso. Ainda assim, qualquer automação no WhatsApp envolve risco operacional e depende da sua configuração e do uso responsável.',
+    answer: 'O BotAssist foi projetado para reduzir risco com modo por mencao, allowlists, owner por token e controles de acesso. Ainda assim, qualquer automacao no WhatsApp envolve risco operacional e depende da sua configuracao e do uso responsavel.',
     icon: Shield
   },
   {
@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: 'Quanto custa a API da Groq?',
-    answer: 'A Groq oferece créditos gratuitos para começar. Consulte os preços atuais em groq.com. O BotAssist em si é 100% gratuito!',
+    answer: 'A Groq oferece creditos gratuitos para comecar. Consulte os precos atuais em groq.com. O BotAssist em si e 100% gratuito.',
     icon: CreditCard
   },
   {
@@ -24,17 +24,17 @@ const faqs = [
   },
   {
     question: 'Quais sistemas operacionais são suportados?',
-    answer: 'Windows 10/11, macOS 10.14+, e Linux (Ubuntu 20.04+, Fedora, etc). Downloads disponíveis para cada plataforma.',
+    answer: 'Windows 10/11 64-bit, macOS 12+ e Linux x64 moderno. A release publica assets dedicados para cada plataforma.',
     icon: Zap
   },
   {
     question: 'Posso personalizar agentes e usar tools?',
-    answer: 'Sim. Você pode criar agentes com prompts e modelos diferentes, além de habilitar tools de forma controlada para fluxos avançados.',
+    answer: 'Sim. Voce pode criar perfis com prompts e modelos diferentes, alem de habilitar tools com auditoria local, politicas de acesso e aprovacao manual quando necessario.',
     icon: Zap
   },
   {
     question: 'Posso usar meu próprio modelo de IA?',
-    answer: 'Atualmente suportamos a Groq API, mas estamos trabalhando em suporte para OpenAI, Anthropic e modelos locais via Ollama.',
+    answer: 'Hoje a linha estavel e focada em Groq. O site nao anuncia suporte estavel a outros providers ate isso existir de forma real no app.',
     icon: Zap
   }
 ]

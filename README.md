@@ -44,7 +44,7 @@ Links rápidos:
 - [🧪 Build](#build)
 - [🚀 Deploy no Vercel](#deploy-no-vercel)
 - [📦 Releases e downloads](#releases-e-downloads)
-- [📰 Atualização 4.1.14](#atualizacao-414)
+- [📰 Atualização 4.2.2](#atualizacao-422)
 - [🤝 Contribuindo](#contribuindo)
 - [☕ Apoie (doação opcional)](#apoie-doacao-opcional)
 - [📜 Licença](#licenca)
@@ -121,17 +121,19 @@ O site busca os arquivos da **última release** do repositório do app (`botassi
 Quando você cria e publica uma release no `botassist-whatsapp`, os botões de download passam a apontar automaticamente para os assets da release.
 Se algum manifest não estiver disponível, o botão cai para a página de releases.
 
-<a id="atualizacao-414"></a>
-## 📰 Atualização 4.1.14
+Atualmente, a landing esta alinhada com a linha estavel **4.2.2** do app desktop.
 
-Data: **2026-02-11**
+<a id="atualizacao-422"></a>
+## 📰 Atualização 4.2.2
+
+Data: **2026-03-21**
 
 Resumo do anúncio para o site:
-- Owner agora pode ser definido por token/comando no WhatsApp (`!owner <token>`).
-- Setup inicial foi alinhado ao novo fluxo de owner por token.
-- Interface sincroniza automaticamente quando o bot altera configurações (`settings`).
-- Documentação atualizada para refletir o fluxo operacional real.
-- BotAssist segue gratuito para **Windows, macOS e Linux**.
+- Renderer endurecido com protocolo `app://botassist/*`.
+- `shell.exec` mais restrito, sem shell composto, pipes ou redirecionamento.
+- Smoke test do binario empacotado cobrindo onboarding, owner por token, tools e update.
+- Pipeline de release mais profissional, com distribuicao estavel para Windows, macOS e Linux.
+- Site atualizado para refletir a linha estavel atual do BotAssist.
 
 Referência editorial:
 - `RELEASE_NOTES.md`

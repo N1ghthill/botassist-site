@@ -5,22 +5,22 @@ import { releaseMeta } from '../lib/releaseMeta'
 const highlights = [
   {
     icon: Rocket,
-    title: 'Owner por token no WhatsApp',
-    description: 'Defina owner por comando com token temporario para onboarding mais seguro.',
+    title: 'Renderer com protocolo dedicado',
+    description: 'A interface agora roda em app://botassist/* com uma superficie mais controlada no Electron.',
     color: 'text-blue-600',
     bgColor: 'bg-blue-100'
   },
   {
     icon: Wrench,
-    title: 'Setup alinhado ao fluxo real',
-    description: 'Etapa de owner atualizada para o metodo por token no setup inicial.',
+    title: 'shell.exec mais profissional',
+    description: 'Execucao validada por comando-base, sem shell composto, pipes ou redirecionamento.',
     color: 'text-emerald-600',
     bgColor: 'bg-emerald-100'
   },
   {
     icon: Layers,
-    title: 'Sincronizacao bot -> UI',
-    description: 'Alteracoes de configuracao feitas pelo bot aparecem automaticamente na interface.',
+    title: 'Release e update validados',
+    description: 'Smoke do binario empacotado e pipeline mais madura para distribuicao nos tres sistemas.',
     color: 'text-violet-600',
     bgColor: 'bg-violet-100'
   }
@@ -38,7 +38,7 @@ export default function ReleaseHighlights() {
                 Novidades da versao {releaseMeta.version}
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4">
-                Fluxo de owner mais seguro e interface sincronizada
+                Release mais madura, distribuicao mais confiavel
               </h2>
               <p className="text-gray-600 mt-3 max-w-2xl">
                 {releaseMeta.summary}
@@ -73,7 +73,7 @@ export default function ReleaseHighlights() {
           </div>
 
           <p className="text-sm text-gray-600 mt-8">
-            Disponível gratuitamente para Windows, macOS e Linux.
+            Disponivel gratuitamente para Windows, macOS e Linux na linha estavel {releaseMeta.version}.
           </p>
         </div>
       </div>

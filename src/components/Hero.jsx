@@ -16,14 +16,14 @@ export default function Hero() {
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-            Automatize conversas no
+            Assistente desktop para
             <span className="block text-primary-600 mt-2">WhatsApp com IA</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            BotAssist conecta seu WhatsApp à Groq AI com interface gráfica, tools poderosas e agentes personalizáveis.
-            Setup inicial guiado, operação profissional e download grátis para Windows, macOS e Linux.
+            BotAssist e um assistente desktop para WhatsApp com IA, perfis, setup guiado, tools opt-in seguras e auto-update.
+            Hoje a linha estavel entrega uma operacao mais madura no Windows, macOS e Linux.
           </p>
 
           {/* CTA Buttons */}
@@ -47,6 +47,7 @@ export default function Hero() {
           <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-sm text-gray-600">
             <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Sem cadastro</span>
             <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Código aberto (MIT)</span>
+            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Auto-update por canal</span>
             <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Download direto do GitHub Releases</span>
           </div>
 
@@ -61,16 +62,16 @@ export default function Hero() {
               <div className="text-gray-600">Para usar</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600">Anti-ban</div>
-              <div className="text-gray-600">Risco reduzido</div>
+              <div className="text-3xl font-bold text-primary-600">Owner</div>
+              <div className="text-gray-600">Por token no WhatsApp</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600">24/7</div>
-              <div className="text-gray-600">Rodando no seu PC</div>
+              <div className="text-3xl font-bold text-primary-600">Tools</div>
+              <div className="text-gray-600">Com auditoria e aprovacao</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600">∞</div>
-              <div className="text-gray-600">Personalizável</div>
+              <div className="text-3xl font-bold text-primary-600">3 SOs</div>
+              <div className="text-gray-600">Windows, macOS e Linux</div>
             </div>
           </div>
         </div>
@@ -99,10 +100,10 @@ export default function Hero() {
                   </div>
                   <div className="max-w-md">
                     <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">
-                      Bot mais poderoso, setup mais simples
+                      Bot mais maduro, distribuicao mais confiavel
                     </h3>
                     <p className="text-gray-600 mt-3">
-                      Feito para quem precisa de automação confiável, com configuração guiada e controle total sobre o WhatsApp.
+                      Feito para quem precisa de automacao confiavel, com configuracao guiada, release estavel e controle real sobre o WhatsApp.
                     </p>
                   </div>
                 </div>
@@ -111,18 +112,18 @@ export default function Hero() {
                   {[
                     {
                       icon: ShieldCheck,
-                      title: 'Anti-ban',
-                      description: 'Camadas de seguranca e limites inteligentes.'
+                      title: 'Runtime endurecido',
+                      description: 'Renderer em app://, fuses ativos e navegacao mais restrita.'
                     },
                     {
                       icon: Layers,
                       title: 'Perfis',
-                      description: 'Troque de agentes, prompts e modelos em segundos.'
+                      description: 'Troque de agentes, prompts e modelos com menos atrito operacional.'
                     },
                     {
                       icon: Sliders,
-                      title: 'Ajustes finos',
-                      description: 'Controle grupos, acesso e comportamento do bot.'
+                      title: 'Release validada',
+                      description: 'Builds estaveis com smoke test e assets dedicados por plataforma.'
                     }
                   ].map((item) => {
                     const Icon = item.icon
@@ -152,11 +153,11 @@ export default function Hero() {
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-primary-600"></span>
-                      Sincronizacao entre bot e UI para refletir ajustes em tempo real.
+                      Ative tools com politicas de acesso, auditoria local e aprovacao manual quando necessario.
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-primary-600"></span>
-                      Publique e rode no Windows, macOS ou Linux.
+                      Atualize pelo canal de release certo no Windows, macOS ou Linux.
                     </div>
                   </div>
                 </div>

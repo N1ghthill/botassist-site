@@ -13,18 +13,20 @@ import Footer from '../components/Footer'
 
 export default function Home() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://botassist.ruas.dev.br'
+  const description =
+    'Assistente desktop para WhatsApp com IA, perfis, setup guiado, tools opt-in com seguranca e auto-update para Windows, macOS e Linux.'
 
   return (
     <>
       <Head>
-        <title>BotAssist - Automatize conversas no WhatsApp com IA</title>
-        <meta name="description" content="BotAssist conecta seu WhatsApp à Groq AI com interface gráfica, tools poderosas e agentes personalizáveis. Setup guiado e grátis para Windows, macOS e Linux." />
+        <title>BotAssist - Assistente desktop para WhatsApp com IA</title>
+        <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
         <link rel="canonical" href={siteUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="BotAssist - Automatize conversas no WhatsApp com IA" />
-        <meta property="og:description" content="BotAssist conecta seu WhatsApp à Groq AI com interface gráfica, tools poderosas e agentes personalizáveis. Setup guiado e grátis para Windows, macOS e Linux." />
+        <meta property="og:title" content="BotAssist - Assistente desktop para WhatsApp com IA" />
+        <meta property="og:description" content={description} />
         <meta property="og:url" content={siteUrl} />
       </Head>
       

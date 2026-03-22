@@ -3,36 +3,36 @@ import { Shield, Settings, Users, Brain, Lock, Zap, Wrench, Smartphone } from 'l
 const features = [
   {
     icon: Shield,
-    title: 'Modo Anti-Ban',
-    description: 'Só responde quando mencionado e apenas em grupos autorizados. Configurações inteligentes para evitar bloqueios.',
+    title: 'Politicas seguras',
+    description: 'Modo por mencao, grupos autorizados, owner por token e controles pensados para operacao responsavel.',
     color: 'text-green-600',
     bgColor: 'bg-green-100'
   },
   {
     icon: Brain,
     title: 'Groq AI Integrada',
-    description: 'Respostas inteligentes com modelos rápidos e de alta qualidade, em uma interface simples.',
+    description: 'Linha estavel focada em Groq para entregar respostas rapidas, perfis e setup mais previsiveis.',
     color: 'text-purple-600',
     bgColor: 'bg-purple-100'
   },
   {
     icon: Settings,
     title: 'Setup Guiado',
-    description: 'Configuração básica assistida em 4 etapas para conectar o bot sem complicação.',
+    description: 'Onboarding em etapas claras para API key, owner por token, preferencias basicas e perfil inicial.',
     color: 'text-blue-600',
     bgColor: 'bg-blue-100'
   },
   {
     icon: Lock,
-    title: 'Segurança Total',
-    description: 'Allowlist de usuários e grupos. Configurações persistentes e protegidas.',
+    title: 'Runtime endurecido',
+    description: 'Electron mais travado, renderer em app://, fuses ativos e navegacao externa mais restrita.',
     color: 'text-red-600',
     bgColor: 'bg-red-100'
   },
   {
     icon: Users,
     title: 'Agentes Personalizáveis',
-    description: 'Crie perfis com prompts, modelo, estilo de resposta e roteamento por usuário/grupo.',
+    description: 'Crie perfis com prompts, modelo, estilo de resposta e roteamento por usuario ou grupo.',
     color: 'text-yellow-600',
     bgColor: 'bg-yellow-100'
   },
@@ -46,14 +46,14 @@ const features = [
   {
     icon: Wrench,
     title: 'Tools Poderosas',
-    description: 'Web, arquivos e automações com controle do owner, auditoria local e operação segura.',
+    description: 'Web, arquivos, shell e e-mail com owner-only quando necessario, auditoria local e aprovacao manual.',
     color: 'text-indigo-600',
     bgColor: 'bg-indigo-100'
   },
   {
     icon: Smartphone,
     title: 'Multiplataforma',
-    description: '100% grátis para Windows, macOS e Linux, com downloads dedicados por plataforma.',
+    description: 'Release estavel com assets dedicados, auto-update por canal e distribuicao para Windows, macOS e Linux.',
     color: 'text-gray-600',
     bgColor: 'bg-gray-100'
   }
@@ -68,7 +68,7 @@ export default function Features() {
             Por que escolher o BotAssist?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Tudo o que você precisa em uma única ferramenta profissional
+            O que hoje ja esta estavel para operar o BotAssist com menos friccao e mais controle
           </p>
         </div>
 

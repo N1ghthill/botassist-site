@@ -13,7 +13,7 @@ const steps = [
     number: '02',
     icon: Settings,
     title: 'Setup Básico Guiado',
-    description: 'Siga o onboarding amigável para API Key, owner, preferências e perfil inicial.',
+    description: 'Siga o onboarding para API key, owner por token, preferencias basicas e perfil inicial.',
     color: 'text-green-600'
   },
   {
@@ -26,8 +26,8 @@ const steps = [
   {
     number: '04',
     icon: Zap,
-    title: 'Ative os Agentes e Tools',
-    description: 'Personalize agentes e habilite tools para fluxos avançados com segurança.',
+    title: 'Ajuste perfis, politicas e tools',
+    description: 'Personalize agentes, ative tools opt-in e aplique politicas de acesso para seu fluxo real.',
     color: 'text-orange-600'
   }
 ]
@@ -41,7 +41,7 @@ export default function HowItWorks() {
             Funciona em 4 Passos Simples
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Setup inicial guiado para começar rápido e evoluir com agentes e tools
+            Setup inicial guiado para owner por token, conexao do WhatsApp e tools controladas
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export default function HowItWorks() {
               Pronto para começar?
             </h3>
             <p className="text-gray-600 mb-6">
-              Comece grátis e valide no seu próprio fluxo em poucos minutos.
+              Comece gratis e valide a linha estavel no seu proprio fluxo em poucos minutos.
             </p>
             <Link
               href="/#download"

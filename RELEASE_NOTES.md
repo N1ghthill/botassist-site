@@ -2,17 +2,17 @@
 
 Registro editorial das novidades destacadas no site do BotAssist.
 
-## 4.1.14 - 2026-02-11
+## 4.2.2 - 2026-03-21
 
 ### Resumo curto
-Release de alinhamento do onboarding e operacao com owner por token, com sincronizacao bot -> UI e documentacao atualizada.
+Release estavel focada em confiabilidade operacional, endurecimento do renderer, shell.exec mais seguro e pipeline de distribuicao mais madura.
 
 ### Destaques para comunicacao
-- Owner por token/comando no WhatsApp (`!owner <token>`).
-- Setup inicial alinhado ao novo fluxo de owner por token.
-- Sincronizacao automatica da interface quando o bot altera `settings`.
-- Documentacao atualizada para refletir o fluxo real de onboarding e operacao.
-- BotAssist continua 100% gratuito para Windows, macOS e Linux.
+- Renderer migrado para `app://botassist/*` com hardening adicional no Electron.
+- `shell.exec` agora valida comando-base e bloqueia shell composto, pipes e redirecionamento.
+- Smoke do binario empacotado valida onboarding, owner por token, tools e fluxo de update.
+- Releases e downloads estaveis publicados para Windows, macOS e Linux.
+- Site revisado para refletir o estado atual do produto.
 
 ### Mensagem pronta (versao curta)
-BotAssist 4.1.14 chegou: owner por token no WhatsApp, setup alinhado ao fluxo real e interface sincronizada com o bot. Tudo de graca para Windows, macOS e Linux.
+BotAssist 4.2.2 esta no ar: renderer endurecido, shell.exec mais seguro, pipeline de release mais madura e downloads estaveis para Windows, macOS e Linux.
