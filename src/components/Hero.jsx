@@ -100,10 +100,10 @@ export default function Hero() {
                   </div>
                   <div className="max-w-md">
                     <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">
-                      Bot mais maduro, distribuicao mais confiavel
+                      Runtime mais claro, tools mais seguras
                     </h3>
                     <p className="text-gray-600 mt-3">
-                      Feito para quem precisa de automacao confiavel, com configuracao guiada, release estavel e controle real sobre o WhatsApp.
+                      Feito para quem precisa de operacao confiavel no WhatsApp, com configuracao guiada, limites explicitos e menos acoplamento no runtime principal.
                     </p>
                   </div>
                 </div>
@@ -112,18 +112,18 @@ export default function Hero() {
                   {[
                     {
                       icon: ShieldCheck,
-                      title: 'Runtime endurecido',
-                      description: 'Renderer em app://, fuses ativos e navegacao mais restrita.'
+                      title: 'Tools endurecidas',
+                      description: 'Validacao canonica de paths bloqueia escapes de allowlist e reduz vetor de erro operacional.'
                     },
                     {
                       icon: Layers,
-                      title: 'Perfis',
-                      description: 'Troque de agentes, prompts e modelos com menos atrito operacional.'
+                      title: 'Runtime modular',
+                      description: 'Comandos e approval flow sairam do hot path principal, deixando o bot mais claro de manter.'
                     },
                     {
                       icon: Sliders,
-                      title: 'Release validada',
-                      description: 'Builds estaveis com smoke test e assets dedicados por plataforma.'
+                      title: 'Contratos explicitos',
+                      description: 'Eventos do bot, IPC e normalizacao de settings ficaram mais consistentes entre as camadas.'
                     }
                   ].map((item) => {
                     const Icon = item.icon

@@ -1,7 +1,7 @@
 # Case - BotAssist Site
 
 ## Propósito
-Este repositório hospeda o site oficial do BotAssist. A landing deve comunicar o aplicativo gratuito, registrar o estado da release estável (hoje `v4.2.2`) e encaminhar tráfego direto para os assets reais dos lançamentos.
+Este repositório hospeda o site oficial do BotAssist. A landing deve comunicar o aplicativo gratuito, registrar o estado da release estável (hoje `v4.2.3`) e encaminhar tráfego direto para os assets reais dos lançamentos.
 
 ## Responsabilidades principais
 - apresentar o BotAssist como produto desktop gratuito, open-source e distribuído por canais reais (`stable`, `beta`, `rc`)
@@ -12,7 +12,7 @@ Este repositório hospeda o site oficial do BotAssist. A landing deve comunicar 
 ## Atualização operacional
 1. Atualize `src/lib/releaseMeta.js` com os destaques da release ativa.
 2. Verifique os downloads e a FAQ se a distribuição (shell, tools, fuses) mudou.
-3. Garanta que `README.md` e `docs/case.md` reflitam o tom oficial (site, não demo) antes de publicar.
+3. Garanta que `README.md`, `docs/case.md` e `RELEASE_NOTES.md` reflitam a release estável atual antes de publicar.
 
 ## Contato
 - site: abra issue neste repositório
