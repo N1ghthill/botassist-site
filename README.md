@@ -68,7 +68,7 @@ Se você quiser contribuir, fique à vontade — eu faço a minha humilde parte 
 <a id="requisitos"></a>
 ## ✅ Requisitos
 
-- Node.js **18+**
+- Node.js **18.18+**
 
 <a id="estrutura-do-projeto"></a>
 ## 🧱 Estrutura do projeto
