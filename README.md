@@ -87,6 +87,12 @@ npm run lint
 npm run build
 ```
 
+Governança de CI:
+
+- workflows versionados usam GitHub Actions pinadas por commit SHA
+- comentários `# vN` ao lado do SHA preservam a major de referência para o Dependabot
+- PRs de update de actions só devem ser mergeados com CI verde
+
 ## Variáveis de ambiente
 
 - `NEXT_PUBLIC_SITE_URL`
