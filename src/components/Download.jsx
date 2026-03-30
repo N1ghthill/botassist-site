@@ -1,9 +1,9 @@
 import { Download as DownloadIcon, Monitor, Apple, Terminal } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import DonateButtons from './DonateButtons'
-import { releaseMeta } from '../lib/releaseMeta'
+import { releaseMeta as fallbackReleaseMeta } from '../lib/releaseMeta'
 
-const Download = () => {
+const Download = ({ releaseMeta = fallbackReleaseMeta }) => {
   const downloads = useMemo(
     () => [
       {
@@ -28,7 +28,7 @@ const Download = () => {
         requirements: releaseMeta.requirements.linux
       }
     ],
-    []
+    [releaseMeta]
   )
 
   const [releaseByPlatform, setReleaseByPlatform] = useState({})

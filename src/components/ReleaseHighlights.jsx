@@ -1,8 +1,8 @@
 import { Sparkles, Wrench, Layers, Rocket } from 'lucide-react'
 import Link from 'next/link'
-import { releaseMeta } from '../lib/releaseMeta'
+import { releaseMeta as fallbackReleaseMeta } from '../lib/releaseMeta'
 
-export default function ReleaseHighlights() {
+export default function ReleaseHighlights({ releaseMeta = fallbackReleaseMeta }) {
   const highlightStyles = [
     { icon: Wrench, color: 'text-blue-600', bgColor: 'bg-blue-100' },
     { icon: Layers, color: 'text-emerald-600', bgColor: 'bg-emerald-100' },
