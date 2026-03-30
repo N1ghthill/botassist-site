@@ -1,4 +1,4 @@
-import { Bug, Github, Mail, MessageCircle } from 'lucide-react'
+import { Bug, GitBranch, Mail, MessageCircle } from 'lucide-react'
 
 export default function Testimonials() {
   return (
@@ -24,7 +24,7 @@ export default function Testimonials() {
             className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 focus-ring"
           >
             <div className="text-primary-600 mb-4">
-              <Github className="h-8 w-8" />
+              <GitBranch className="h-8 w-8" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Abrir issue no GitHub</h3>
             <p className="text-gray-600">

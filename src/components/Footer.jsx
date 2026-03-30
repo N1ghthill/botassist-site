@@ -1,4 +1,4 @@
-import { Github, Mail, Globe } from 'lucide-react'
+import { GitBranch, Mail, Globe } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import DonateButtons from './DonateButtons'
@@ -25,7 +25,7 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { icon: Github, label: 'GitHub (app)', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
+  { icon: GitBranch, label: 'GitHub (app)', href: 'https://github.com/N1ghthill/botassist-whatsapp' },
   { icon: Mail, label: 'Email', href: 'mailto:irving@ruas.dev.br' }
 ]
 
