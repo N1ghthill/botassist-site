@@ -19,14 +19,14 @@ export default function Hero() {
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-            Assistente desktop para
-            <span className="block text-primary-600 mt-2">WhatsApp com IA</span>
+            O desktop local-first para
+            <span className="block text-primary-600 mt-2">operar WhatsApp com IA</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            BotAssist e um assistente desktop para WhatsApp com IA, perfis, setup guiado, tools opt-in seguras e auto-update.
-            Hoje a linha estavel entrega uma operacao mais madura no Windows, macOS e Linux.
+            BotAssist foi pensado para atendimento inicial, triagem de contatos e operacao assistida por um owner.
+            Instala no desktop, roda com setup guiado e mantem perfis, politicas e tools sob controle sem depender de SaaS.
           </p>
 
           {/* CTA Buttons */}
@@ -35,42 +35,43 @@ export default function Hero() {
               href="/#download"
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl focus-ring"
             >
-              Download Gratuito
+              Baixar e testar agora
               <ArrowRight className="ml-3 h-5 w-5" />
             </Link>
             <Link
-              href="/#features"
+              href="/#use-cases"
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-gray-800 font-semibold border-2 border-gray-200 hover:border-primary-300 hover:bg-gray-50 transition-colors focus-ring"
             >
               <Zap className="mr-3 h-5 w-5" />
-              Ver Funcionalidades
+              Ver casos de uso
             </Link>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-sm text-gray-600">
+            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Atendimento inicial</span>
+            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Triagem de contatos</span>
+            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Operacao assistida pelo owner</span>
             <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Sem cadastro</span>
-            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Código aberto (MIT)</span>
-            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Auto-update por canal</span>
-            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Download direto do GitHub Releases</span>
           </div>
 
-          <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-12">
-            Este site é <span className="font-semibold text-gray-700">software livre (MIT)</span>. Contribuições são bem-vindas.
+          <p className="text-sm text-gray-500 max-w-3xl mx-auto mb-12">
+            Melhor fit: operacao local com uma pessoa responsavel, time enxuto ou fluxo interno.
+            Nao e uma plataforma omnichannel multiusuario nem promete automacao sem supervisao.
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600">Grátis</div>
-              <div className="text-gray-600">Para usar</div>
+              <div className="text-3xl font-bold text-primary-600">Local-first</div>
+              <div className="text-gray-600">Dados e operacao no desktop</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary-600">Owner</div>
-              <div className="text-gray-600">Por token no WhatsApp</div>
+              <div className="text-gray-600">Claim por token no WhatsApp</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600">Tools</div>
-              <div className="text-gray-600">Com auditoria e aprovacao</div>
+              <div className="text-3xl font-bold text-primary-600">MIT</div>
+              <div className="text-gray-600">Codigo aberto e gratuito</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary-600">3 SOs</div>
@@ -132,19 +133,19 @@ export default function Hero() {
 
               <div className="space-y-4">
                 <div className="rounded-2xl border border-gray-200/70 bg-white/90 p-5 shadow-sm">
-                  <div className="text-xs uppercase tracking-[0.2em] text-gray-500">Setup rapido</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-gray-500">Primeiros 15 min</div>
                   <div className="mt-4 space-y-3 text-sm text-gray-700">
                     <div className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-primary-600"></span>
-                      Gere um token de owner e reivindique no WhatsApp.
+                      Instale a release estavel e conclua o onboarding no proprio desktop.
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-primary-600"></span>
-                      Ative tools com politicas de acesso, auditoria local e aprovacao manual quando necessario.
+                      Gere o token de owner, reivindique o bot e conecte o WhatsApp com QR.
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-primary-600"></span>
-                      Atualize pelo canal de release certo no Windows, macOS ou Linux.
+                      Ajuste perfis, tools e politicas so para o fluxo que voce quer validar primeiro.
                     </div>
                   </div>
                 </div>
@@ -160,7 +161,7 @@ export default function Hero() {
                     </div>
                   </div>
                   <p className="text-sm text-white/80 mt-4">
-                    {releaseMeta.summary}
+                    Melhor para validar atendimento inicial, triagem e operacao assistida com supervisao.
                   </p>
                 </div>
               </div>
