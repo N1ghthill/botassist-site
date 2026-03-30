@@ -36,7 +36,7 @@ async function fetchLatestReleaseVersion() {
 async function fetchLatestManifestVersion() {
   const response = await fetch(MANIFEST_URL, {
     headers: {
-      Accept: 'application/json',
+      Accept: 'application/octet-stream',
       'User-Agent': 'botassist-site-release-check'
     },
     redirect: 'follow'
