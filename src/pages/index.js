@@ -10,8 +10,9 @@ import Testimonials from '../components/Testimonials'
 import FAQ from '../components/FAQ'
 import Download from '../components/Download'  // ← SEM chaves!
 import Footer from '../components/Footer'
+import { fetchLatestReleaseMeta, RELEASE_META_REVALIDATE_SECONDS } from '../lib/appRelease'
 
-export default function Home() {
+export default function Home({ releaseMeta }) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://botassist.ruas.dev.br'
   const socialImage = `${siteUrl.replace(/\/+$/, '')}/botassist_logo.png`
   const description =
@@ -39,18 +40,27 @@ export default function Home() {
       <div className="min-h-screen bg-white bg-[radial-gradient(1200px_600px_at_10%_-10%,rgba(63,132,89,0.18),transparent),radial-gradient(900px_500px_at_90%_0%,rgba(54,72,214,0.12),transparent)]">
         <Header />
         <main>
-          <Hero />
-          <ReleaseHighlights />
+          <Hero releaseMeta={releaseMeta} />
+          <ReleaseHighlights releaseMeta={releaseMeta} />
           <Features />
           <UseCases />
           <HowItWorks />
           <Screenshots />
           <FAQ />
-          <Download />
+          <Download releaseMeta={releaseMeta} />
           <Testimonials />
         </main>
         <Footer />
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      releaseMeta: await fetchLatestReleaseMeta(),
+    },
+    revalidate: RELEASE_META_REVALIDATE_SECONDS,
+  }
 }

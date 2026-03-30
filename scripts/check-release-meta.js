@@ -5,6 +5,7 @@ const path = require('path')
 
 const OWNER = 'N1ghthill'
 const REPO = 'botassist-whatsapp'
+const MANIFEST_URL = `https://github.com/${OWNER}/${REPO}/releases/latest/download/release-manifest.json`
 
 function readEditorialVersion() {
   const filePath = path.join(__dirname, '..', 'src', 'lib', 'releaseMeta.js')
@@ -32,12 +33,46 @@ async function fetchLatestReleaseVersion() {
   return String(data.tag_name || '').trim().replace(/^v/, '')
 }
 
+async function fetchLatestManifestVersion() {
+  const response = await fetch(MANIFEST_URL, {
+    headers: {
+      Accept: 'application/json',
+      'User-Agent': 'botassist-site-release-check'
+    },
+    redirect: 'follow'
+  })
+
+  if (!response.ok) {
+    return null
+  }
+
+  const contentType = response.headers.get('content-type') || ''
+  if (contentType.includes('text/html')) {
+    return null
+  }
+
+  const data = await response.json()
+  return String(data?.version || '').trim() || null
+}
+
 async function main() {
   const editorialVersion = readEditorialVersion()
+  const manifestVersion = await fetchLatestManifestVersion()
   const latestReleaseVersion = await fetchLatestReleaseVersion()
 
   if (!latestReleaseVersion) {
     throw new Error('GitHub nao retornou uma tag valida para a latest release')
+  }
+
+  if (manifestVersion) {
+    if (manifestVersion !== latestReleaseVersion) {
+      throw new Error(
+        `release-manifest.json (${manifestVersion}) diverge da latest release do app (${latestReleaseVersion})`
+      )
+    }
+
+    console.log(`ok - release-manifest.json alinhado com a latest release (${manifestVersion})`)
+    return
   }
 
   if (editorialVersion !== latestReleaseVersion) {

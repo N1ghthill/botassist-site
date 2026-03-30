@@ -1,9 +1,9 @@
 import { Shield, Zap, ArrowRight, ShieldCheck, Layers, Sliders, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { releaseMeta } from '../lib/releaseMeta'
+import { releaseMeta as fallbackReleaseMeta } from '../lib/releaseMeta'
 
-export default function Hero() {
+export default function Hero({ releaseMeta = fallbackReleaseMeta }) {
   const cardIcons = [ShieldCheck, Layers, Sliders]
   const cards = Array.isArray(releaseMeta.cards) ? releaseMeta.cards.slice(0, 3) : []
 
