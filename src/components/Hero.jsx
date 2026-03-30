@@ -4,6 +4,9 @@ import Image from 'next/image'
 import { releaseMeta } from '../lib/releaseMeta'
 
 export default function Hero() {
+  const cardIcons = [ShieldCheck, Layers, Sliders]
+  const cards = Array.isArray(releaseMeta.cards) ? releaseMeta.cards.slice(0, 3) : []
+
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
@@ -100,33 +103,17 @@ export default function Hero() {
                   </div>
                   <div className="max-w-md">
                     <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">
-                      Runtime mais claro, tools mais seguras
+                      {releaseMeta.title}
                     </h3>
                     <p className="text-gray-600 mt-3">
-                      Feito para quem precisa de operacao confiavel no WhatsApp, com configuracao guiada, limites explicitos e menos acoplamento no runtime principal.
+                      {releaseMeta.summary}
                     </p>
                   </div>
                 </div>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                  {[
-                    {
-                      icon: ShieldCheck,
-                      title: 'Tools endurecidas',
-                      description: 'Validacao canonica de paths bloqueia escapes de allowlist e reduz vetor de erro operacional.'
-                    },
-                    {
-                      icon: Layers,
-                      title: 'Runtime modular',
-                      description: 'Comandos e approval flow sairam do hot path principal, deixando o bot mais claro de manter.'
-                    },
-                    {
-                      icon: Sliders,
-                      title: 'Contratos explicitos',
-                      description: 'Eventos do bot, IPC e normalizacao de settings ficaram mais consistentes entre as camadas.'
-                    }
-                  ].map((item) => {
-                    const Icon = item.icon
+                  {cards.map((item, index) => {
+                    const Icon = cardIcons[index] || Sparkles
                     return (
                       <div
                         key={item.title}

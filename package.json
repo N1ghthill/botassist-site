@@ -7,13 +7,14 @@
     "node": ">=18.18.0"
   },
   "scripts": {
+    "check:release-meta": "node scripts/check-release-meta.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx --max-warnings=0"
   },
   "dependencies": {
-    "framer-motion": "^10.16.0",
+    "framer-motion": "^12.38.0",
     "lucide-react": "^0.309.0",
     "next": "^15.5.14",
     "react": "^18.2.0",

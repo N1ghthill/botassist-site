@@ -13,6 +13,7 @@ import Footer from '../components/Footer'
 
 export default function Home() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://botassist.ruas.dev.br'
+  const socialImage = `${siteUrl.replace(/\/+$/, '')}/botassist_logo.png`
   const description =
     'Assistente desktop para WhatsApp com IA, perfis, setup guiado, tools opt-in com seguranca e auto-update para Windows, macOS e Linux.'
 
@@ -28,6 +29,11 @@ export default function Home() {
         <meta property="og:title" content="BotAssist - Assistente desktop para WhatsApp com IA" />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={siteUrl} />
+        <meta property="og:image" content={socialImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="BotAssist - Assistente desktop para WhatsApp com IA" />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={socialImage} />
       </Head>
       
       <div className="min-h-screen bg-white bg-[radial-gradient(1200px_600px_at_10%_-10%,rgba(63,132,89,0.18),transparent),radial-gradient(900px_500px_at_90%_0%,rgba(54,72,214,0.12),transparent)]">
