@@ -161,10 +161,10 @@ function normalizeReleaseMeta(base, releaseInfo = {}) {
   }
 }
 
-async function fetchJson(url, userAgent) {
+async function fetchJson(url, userAgent, accept = 'application/vnd.github+json, application/json') {
   const response = await fetch(url, {
     headers: {
-      Accept: 'application/vnd.github+json, application/json',
+      Accept: accept,
       'User-Agent': userAgent,
     },
     redirect: 'follow',
@@ -185,7 +185,8 @@ async function fetchJson(url, userAgent) {
 async function fetchLatestManifest() {
   return fetchJson(
     `${RELEASE_PAGE_URL}/download/${RELEASE_MANIFEST_FILE}`,
-    'botassist-site-release-manifest'
+    'botassist-site-release-manifest',
+    'application/octet-stream'
   )
 }
 
