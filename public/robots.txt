@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://botassist.ruas.dev.br/sitemap.xml

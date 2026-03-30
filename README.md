@@ -44,7 +44,7 @@ O site consulta os manifests publicados pelo `electron-builder` no repositório 
 
 Quando existe asset direto para a plataforma, o botão aponta para ele. Quando não existe, o fallback é a página de releases do BotAssist.
 
-Hoje a landing está alinhada com a linha estável `v4.2.3` do app desktop.
+Hoje a landing está alinhada com a linha estável `v4.2.4` do app desktop.
 
 ## Stack
 
@@ -82,6 +82,7 @@ npm run dev
 Validação:
 
 ```bash
+npm run check:release-meta
 npm run lint
 npm run build
 ```

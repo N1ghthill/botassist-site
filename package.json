@@ -7,6 +7,7 @@
     "node": ">=18.18.0"
   },
   "scripts": {
+    "check:release-meta": "node scripts/check-release-meta.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
