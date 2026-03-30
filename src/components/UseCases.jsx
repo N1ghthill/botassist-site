@@ -1,24 +1,24 @@
-import { MessageSquare, Users, Wrench, ArrowRight } from 'lucide-react'
+import { MessageSquare, Users, Wrench, ArrowRight, CheckCircle2, CircleOff } from 'lucide-react'
 import Link from 'next/link'
 
 const useCases = [
   {
     icon: MessageSquare,
-    title: 'Atendimento inicial',
-    description: 'Exemplo: responder perguntas frequentes, coletar contexto e manter o time livre para casos complexos.',
-    outcome: 'Possivel ganho: menos retrabalho com mensagens repetidas.'
+    title: 'Atendimento inicial para negocios pequenos',
+    description: 'Absorve perguntas recorrentes, coleta contexto e deixa o atendimento humano entrar com mais informacao.',
+    outcome: 'Melhor quando existe volume repetitivo e alguem responsavel pela operacao.'
   },
   {
     icon: Users,
-    title: 'Triagem de contatos',
-    description: 'Exemplo: direcionar conversas por perfil de cliente, grupo ou intencao com regras e agentes personalizados.',
-    outcome: 'Possivel ganho: fluxo mais organizado para priorizar respostas.'
+    title: 'Triagem de contatos e grupos',
+    description: 'Classifica intencao, prioriza conversas e aplica perfis diferentes por grupo, contato ou contexto.',
+    outcome: 'Melhor quando voce precisa organizar a fila e evitar resposta igual para todo mundo.'
   },
   {
     icon: Wrench,
-    title: 'Operação assistida com tools',
-    description: 'Exemplo: usar web, arquivos e automacoes com controle do owner e aprovacao quando necessario.',
-    outcome: 'Possivel ganho: mais autonomia sem abrir mao de seguranca operacional.'
+    title: 'Operacao assistida pelo owner',
+    description: 'Combina IA, web, arquivos e automacoes com aprovacao e politicas para manter o controle local.',
+    outcome: 'Melhor quando a automacao precisa de supervisao e historico local.'
   }
 ]
 
@@ -28,10 +28,10 @@ export default function UseCases() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Possibilidades de uso
+            Onde o BotAssist encaixa melhor
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Abaixo estao exemplos ilustrativos de como o BotAssist pode ser configurado no WhatsApp.
+            Tres cenarios em que o produto tende a entregar valor rapido hoje, sem prometer um fit universal.
           </p>
         </div>
 
@@ -54,15 +54,41 @@ export default function UseCases() {
           })}
         </div>
 
-        <div className="mt-12 rounded-2xl border border-primary-100 bg-primary-50 p-6 text-center">
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          <div className="rounded-2xl border border-primary-100 bg-primary-50 p-6">
+            <div className="flex items-center gap-3 text-primary-800">
+              <CheckCircle2 className="h-5 w-5" />
+              <h3 className="text-lg font-bold">Bom fit se voce quer</h3>
+            </div>
+            <ul className="mt-4 space-y-3 text-sm text-gray-700">
+              <li>Instalar localmente e validar um fluxo real com rapidez.</li>
+              <li>Operar com owner claro, time pequeno ou uso interno supervisionado.</li>
+              <li>Controlar tools, politicas e canais sem depender de SaaS.</li>
+            </ul>
+          </div>
+
+          <div className="rounded-2xl border border-gray-200 bg-white p-6">
+            <div className="flex items-center gap-3 text-gray-700">
+              <CircleOff className="h-5 w-5" />
+              <h3 className="text-lg font-bold">Talvez nao seja o melhor fit se voce precisa</h3>
+            </div>
+            <ul className="mt-4 space-y-3 text-sm text-gray-700">
+              <li>Plataforma omnichannel multiusuario completa com operacao sem dono definido.</li>
+              <li>Automacao sem supervisao humana ou garantia de resultado comercial.</li>
+              <li>Fluxo enterprise pronto de ponta a ponta sem configuracao local.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-primary-100 bg-primary-50 p-6 text-center">
           <p className="text-sm text-gray-700">
-            Estes itens sao exemplos e nao representam resultados garantidos.
+            Estes cenarios sao exemplos de fit e nao representam resultado garantido.
           </p>
           <Link
             href="/#download"
             className="mt-4 inline-flex items-center justify-center rounded-xl bg-primary-600 px-6 py-3 text-white font-semibold hover:bg-primary-700 transition-colors focus-ring"
           >
-            Testar no meu fluxo
+            Validar no meu fluxo
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>

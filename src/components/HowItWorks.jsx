@@ -5,29 +5,29 @@ const steps = [
   {
     number: '01',
     icon: Download,
-    title: 'Baixe e Instale',
-    description: 'Faça download gratuito para Windows, macOS ou Linux e instale em segundos.',
+    title: 'Instale a release estavel',
+    description: 'Baixe para Windows, macOS ou Linux e suba o app localmente no ambiente em que ele vai operar.',
     color: 'text-blue-600'
   },
   {
     number: '02',
     icon: Settings,
-    title: 'Setup Básico Guiado',
-    description: 'Siga o onboarding para API key, owner por token, preferencias basicas e perfil inicial.',
+    title: 'Conclua o onboarding',
+    description: 'Passe pelo setup guiado para API key, owner por token, preferencias basicas e perfil inicial.',
     color: 'text-green-600'
   },
   {
     number: '03',
     icon: MessageSquare,
-    title: 'Conecte o WhatsApp',
-    description: 'Escaneie o QR Code e pronto! Seu bot está conectado.',
+    title: 'Conecte e reivindique',
+    description: 'Escaneie o QR, reivindique o owner e deixe o bot pronto para responder no fluxo certo.',
     color: 'text-purple-600'
   },
   {
     number: '04',
     icon: Zap,
-    title: 'Ajuste perfis, politicas e tools',
-    description: 'Personalize agentes, ative tools opt-in e aplique politicas de acesso para seu fluxo real.',
+    title: 'Ajuste o fluxo real',
+    description: 'Refine perfis, politicas e tools so no caso de uso que voce quer validar primeiro.',
     color: 'text-orange-600'
   }
 ]
@@ -38,10 +38,10 @@ export default function HowItWorks() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Funciona em 4 Passos Simples
+            Do download ao primeiro fluxo
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Setup inicial guiado para owner por token, conexao do WhatsApp e tools controladas
+            Em geral, o primeiro valor vem depois do onboarding, do claim do owner e do ajuste minimo de perfil/politica
           </p>
         </div>
 
@@ -79,16 +79,16 @@ export default function HowItWorks() {
         <div className="mt-16 text-center">
           <div className="inline-block bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 max-w-2xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Pronto para começar?
+              Validar e rapido
             </h3>
             <p className="text-gray-600 mb-6">
-              Comece gratis e valide a linha estavel no seu proprio fluxo em poucos minutos.
+              Se o fit fizer sentido, voce consegue sair do download para um fluxo real em poucos minutos.
             </p>
             <Link
               href="/#download"
               className="inline-flex items-center px-8 py-4 rounded-xl bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl focus-ring"
             >
-              Baixar Agora - Grátis
+              Baixar a release estavel
             </Link>
           </div>
         </div>

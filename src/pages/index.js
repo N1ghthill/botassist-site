@@ -15,23 +15,23 @@ export default function Home() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://botassist.ruas.dev.br'
   const socialImage = `${siteUrl.replace(/\/+$/, '')}/botassist_logo.png`
   const description =
-    'Assistente desktop para WhatsApp com IA, perfis, setup guiado, tools opt-in com seguranca e auto-update para Windows, macOS e Linux.'
+    'Desktop local-first para WhatsApp com IA, pensado para atendimento inicial, triagem e operacao assistida com perfis, politicas e tools sob controle.'
 
   return (
     <>
       <Head>
-        <title>BotAssist - Assistente desktop para WhatsApp com IA</title>
+        <title>BotAssist - Desktop local-first para operar WhatsApp com IA</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
         <link rel="canonical" href={siteUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="BotAssist - Assistente desktop para WhatsApp com IA" />
+        <meta property="og:title" content="BotAssist - Desktop local-first para operar WhatsApp com IA" />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={siteUrl} />
         <meta property="og:image" content={socialImage} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="BotAssist - Assistente desktop para WhatsApp com IA" />
+        <meta name="twitter:title" content="BotAssist - Desktop local-first para operar WhatsApp com IA" />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={socialImage} />
       </Head>

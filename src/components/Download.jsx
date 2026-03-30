@@ -61,11 +61,16 @@ const Download = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Baixe o BotAssist Agora
+            Baixe e valide no seu proprio fluxo
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Linha estavel {releaseMeta.version}, 100% gratuita para Windows, macOS e Linux. Comece com setup guiado em poucos minutos.
+            Linha estavel {releaseMeta.version}, gratuita, local e distribuida via GitHub Releases. Boa para uma validacao rapida antes de ampliar o uso.
           </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-sm text-gray-600">
+            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Sem cadastro</span>
+            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">GitHub Releases oficial</span>
+            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 border border-gray-200">Codigo aberto (MIT)</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -104,8 +109,8 @@ const Download = () => {
                 <p className="text-gray-600 mb-4">Requisitos: {item.requirements}</p>
                 <p className="text-sm text-gray-500 mb-6">
                   {item.platform === 'linux'
-                    ? 'A release Linux publica AppImage, .deb e .rpm.'
-                    : 'O botao aponta para o asset oficial da release estavel.'}
+                    ? 'A release Linux publica AppImage, .deb e .rpm para voce validar no ambiente certo.'
+                    : 'O botao aponta para o asset oficial da release estavel para um teste local rapido.'}
                 </p>
                 <a
                   href={href}
