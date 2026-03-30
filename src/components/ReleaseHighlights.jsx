@@ -2,31 +2,14 @@ import { Sparkles, Wrench, Layers, Rocket } from 'lucide-react'
 import Link from 'next/link'
 import { releaseMeta } from '../lib/releaseMeta'
 
-const highlights = [
-  {
-    icon: Wrench,
-    title: 'Tools mais seguras',
-    description: 'Filesystem e shell passaram a validar melhor paths e contexto de execucao para reduzir risco operacional.',
-    color: 'text-blue-600',
-    bgColor: 'bg-blue-100'
-  },
-  {
-    icon: Layers,
-    title: 'Runtime menos concentrado',
-    description: 'Approval flow e comandos operacionais sairam de pontos centrais do runtime sem mudar comportamento.',
-    color: 'text-emerald-600',
-    bgColor: 'bg-emerald-100'
-  },
-  {
-    icon: Rocket,
-    title: 'Distribuicao mais verificavel',
-    description: 'A linha estavel agora fecha com verificacao automatica dos feeds e assets reais publicados.',
-    color: 'text-violet-600',
-    bgColor: 'bg-violet-100'
-  }
-]
-
 export default function ReleaseHighlights() {
+  const highlightStyles = [
+    { icon: Wrench, color: 'text-blue-600', bgColor: 'bg-blue-100' },
+    { icon: Layers, color: 'text-emerald-600', bgColor: 'bg-emerald-100' },
+    { icon: Rocket, color: 'text-violet-600', bgColor: 'bg-violet-100' }
+  ]
+  const cards = Array.isArray(releaseMeta.cards) ? releaseMeta.cards.slice(0, 3) : []
+
   return (
     <section id="release-highlights" className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +21,7 @@ export default function ReleaseHighlights() {
                 Novidades da versao {releaseMeta.version}
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4">
-                Menos acoplamento, mais clareza operacional
+                {releaseMeta.title}
               </h2>
               <p className="text-gray-600 mt-3 max-w-2xl">
                 {releaseMeta.summary}
@@ -55,15 +38,16 @@ export default function ReleaseHighlights() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {highlights.map((item) => {
-              const Icon = item.icon
+            {cards.map((item, index) => {
+              const style = highlightStyles[index] || highlightStyles[highlightStyles.length - 1]
+              const Icon = style.icon
               return (
                 <article
                   key={item.title}
                   className="rounded-2xl border border-gray-100 bg-gray-50/70 p-6 shadow-sm"
                 >
-                  <div className={`inline-flex p-3 rounded-xl ${item.bgColor} mb-4`}>
-                    <Icon className={`h-6 w-6 ${item.color}`} />
+                  <div className={`inline-flex p-3 rounded-xl ${style.bgColor} mb-4`}>
+                    <Icon className={`h-6 w-6 ${style.color}`} />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-gray-600">{item.description}</p>
