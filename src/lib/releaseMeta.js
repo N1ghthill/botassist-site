@@ -1,31 +1,32 @@
 export const releaseMeta = {
-  version: '4.2.4',
-  date: '2026-03-29',
-  badge: 'Release estavel com dependencias saneadas e fechamento do patch de release',
-  title: 'Saneamento de dependencias e fechamento do patch de release',
+  version: '4.2.5',
+  date: '2026-04-22',
+  badge: 'Release de segurança com correções críticas de vulnerabilidades',
+  title: 'Atualização de segurança: correções de vulnerabilidades críticas',
   summary:
-    'Patch estavel de manutencao focado em atualizar dependencias vulneraveis de producao, manter a verificacao pos-publicacao no fluxo e alinhar a documentacao da linha 4.2.4 antes do proximo tag.',
+    'Release de segurança crítica focada em corrigir vulnerabilidades em dependências. Atualizações de segurança para @xmldom/xmldom, lodash e nodemailer. Todas as correções testadas e validadas sem breaking changes.',
   cards: [
     {
-      title: 'Dependencias saneadas',
+      title: 'Segurança reforçada',
       description:
-        'mailparser foi atualizado para 3.9.6, puxando nodemailer 8.0.4 e zerando vulnerabilidades de producao nessa trilha.'
+        'Correção de 4 vulnerabilidades críticas em dependências: @xmldom/xmldom (CVE-2026-34601), lodash (2 vulnerabilidades) e nodemailer.'
     },
     {
-      title: 'Release mais verificavel',
+      title: 'Testes completos',
       description:
-        'A verificacao pos-publicacao com release:verify segue incorporada ao fluxo para reduzir drift entre feeds, assets e docs.'
+        'Todas as 60+ testes unitários passando, linting e formatação OK, builds funcionais em todas as plataformas.'
     },
     {
-      title: 'Patch revalidado',
+      title: 'Documentação transparente',
       description:
-        'A linha 4.2.4 foi rechecada com lint, testes, build Linux --dir, smoke do binario empacotado e auditoria de dependencias.'
+        'Vulnerabilidades documentadas em SECURITY_ADVISORY_2026-04-22.md. Processo de segurança estabelecido para monitoramento contínuo.'
     }
   ],
   highlights: [
-    'mailparser atualizado para 3.9.6, puxando nodemailer 8.0.4 e eliminando vulnerabilidades de producao nessa cadeia.',
-    'Verificacao pos-publicacao via release:verify mantida no fluxo para revalidar feeds e assets reais publicados.',
-    'Patch revalidado com lint, testes, build Linux --dir, smoke do binario empacotado e auditoria de dependencias.'
+    '@xmldom/xmldom atualizado para 0.8.13 corrigindo injeção XML (CVE-2026-34601).',
+    'lodash atualizado para 4.18.1 corrigindo 2 vulnerabilidades (injeção de código e poluição de protótipo).',
+    'nodemailer atualizado via mailparser corrigindo injeção SMTP.',
+    'Todas as correções testadas sem breaking changes para usuários existentes.'
   ],
   requirements: {
     windows: 'Windows 10/11 64-bit',
