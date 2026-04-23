@@ -1,7 +1,7 @@
 # Case - BotAssist Site
 
 ## Propósito
-Este repositório hospeda o site oficial do BotAssist. A landing deve comunicar o aplicativo gratuito, registrar o estado da release estável (hoje `v4.2.4`) e encaminhar tráfego direto para os assets reais dos lançamentos.
+Este repositório hospeda o site oficial do BotAssist. A landing deve comunicar o aplicativo gratuito, registrar o estado da release estável (hoje `v4.2.6`) e encaminhar tráfego direto para os assets reais dos lançamentos.
 
 ## Responsabilidades principais
 - apresentar o BotAssist como produto desktop gratuito, open-source e distribuído por canais reais (`stable`, `beta`, `rc`)
