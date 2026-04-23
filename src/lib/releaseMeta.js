@@ -1,32 +1,32 @@
 export const releaseMeta = {
-  version: '4.2.5',
+  version: '4.2.6',
   date: '2026-04-22',
-  badge: 'Release de segurança com correções críticas de vulnerabilidades',
-  title: 'Atualização de segurança: correções de vulnerabilidades críticas',
+  badge: 'Release estável com alinhamento operacional pós-segurança',
+  title: 'Alinhamento operacional da release de segurança',
   summary:
-    'Release de segurança crítica focada em corrigir vulnerabilidades em dependências. Atualizações de segurança para @xmldom/xmldom, lodash e nodemailer. Todas as correções testadas e validadas sem breaking changes.',
+    'Patch estável focado em promover a correção de segurança para a linha publicada com versão coerente, gate de audit rastreável no CI e documentação alinhada ao estado real da release.',
   cards: [
     {
-      title: 'Segurança reforçada',
+      title: 'Gate rastreável de audit',
       description:
-        'Correção de 4 vulnerabilidades críticas em dependências: @xmldom/xmldom (CVE-2026-34601), lodash (2 vulnerabilidades) e nodemailer.'
+        'O CI deixa de ignorar vulnerabilidades críticas novas e passa a aceitar apenas a cadeia transitiva documentada do baileys/libsignal/protobufjs.'
     },
     {
-      title: 'Testes completos',
+      title: 'Versão publicada coerente',
       description:
-        'Todas as 60+ testes unitários passando, linting e formatação OK, builds funcionais em todas as plataformas.'
+        'A linha estável sobe para 4.2.6 sem reescrever a prerelease v4.2.5, mantendo comunicação, tag e artefatos alinhados.'
     },
     {
-      title: 'Documentação transparente',
+      title: 'Documentação corrigida',
       description:
-        'Vulnerabilidades documentadas em SECURITY_ADVISORY_2026-04-22.md. Processo de segurança estabelecido para monitoramento contínuo.'
+        'Notas públicas e advisory passam a refletir o estado real da release e da validação executada.'
     }
   ],
   highlights: [
-    '@xmldom/xmldom atualizado para 0.8.13 corrigindo injeção XML (CVE-2026-34601).',
-    'lodash atualizado para 4.18.1 corrigindo 2 vulnerabilidades (injeção de código e poluição de protótipo).',
-    'nodemailer atualizado via mailparser corrigindo injeção SMTP.',
-    'Todas as correções testadas sem breaking changes para usuários existentes.'
+    'CI volta a falhar para vulnerabilidades críticas novas e aceita apenas a cadeia transitiva já documentada.',
+    'Versão do app, lockfile e changelog estruturado sobem juntos para 4.2.6.',
+    'Documentação de segurança e release deixa de sobredeclarar o estado de validação.',
+    'Patch revalidado com testes automatizados e gate dedicado de security audit.'
   ],
   requirements: {
     windows: 'Windows 10/11 64-bit',

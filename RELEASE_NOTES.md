@@ -2,6 +2,20 @@
 
 Registro editorial das novidades destacadas no site do BotAssist.
 
+## 4.2.6 - 2026-04-22
+
+### Resumo curto
+Release estável focada em consolidar o patch de segurança na linha publicada, alinhar versão, CI e comunicação pública sem reescrever a prerelease `v4.2.5`.
+
+### Destaques para comunicacao
+- A linha estável publicada passa a ser `v4.2.6`.
+- O CI do app volta a falhar para vulnerabilidades críticas novas, mantendo exceção explícita apenas para a cadeia transitiva já documentada.
+- Notas públicas, advisory e artefatos publicados passam a refletir o estado real da release.
+- Site ajustado para apontar a release estável correta e reduzir drift entre landing e GitHub Releases.
+
+### Mensagem pronta (versao curta)
+BotAssist 4.2.6 está no ar: patch estável de alinhamento pós-segurança, com release correta, CI mais rastreável e downloads consistentes para Windows, macOS e Linux.
+
 ## 4.2.3 - 2026-03-22
 
 ### Resumo curto
